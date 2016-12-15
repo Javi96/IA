@@ -4,6 +4,7 @@ Repositorio con el material y las prácticas impartidas en la asignatura Intelig
 ## Notas
 + Las prácticas están implementadas en Java y Jess.
 + Para correr los proyectos es necesario el entorno de desarrollo Eclipse con el plugin de Jess instalado.
++ Los archivos indicados en los enunciados están en la carpeta 'Material proporcionado'.
 
 ## Autores
 * **Javier Cortés Tejada** - [Javi96](https://github.com/Javi96)
