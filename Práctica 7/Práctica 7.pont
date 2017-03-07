@@ -1,0 +1,133 @@
+; Tue Mar 07 21:12:35 CET 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot pegi
+		(type INTEGER)
+		(range 3 18)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot price
+;+		(comment "Price of the app.")
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot version
+		(type FLOAT)
+		(range 1.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot developer
+		(type INSTANCE)
+;+		(allowed-classes Developer)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot operative_system
+		(type INSTANCE)
+;+		(allowed-classes Operative_system)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot score
+		(type FLOAT)
+		(range 0.0 5.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot name_
+;+		(comment "Name of the app")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot download
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass App
+	(is-a USER)
+	(role abstract)
+	(single-slot operative_system
+		(type INSTANCE)
+;+		(allowed-classes Operative_system)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot download
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot score
+		(type FLOAT)
+		(range 0.0 5.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot pegi
+		(type INTEGER)
+		(range 3 18)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot name_
+;+		(comment "Name of the app")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot price
+;+		(comment "Price of the app.")
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot developer
+		(type INSTANCE)
+;+		(allowed-classes Developer)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Game
+	(is-a App)
+	(role concrete))
+
+(defclass Social_network
+	(is-a App)
+	(role concrete))
+
+(defclass Music
+	(is-a App)
+	(role concrete))
+
+(defclass Travel
+	(is-a App)
+	(role concrete))
+
+(defclass Video
+	(is-a App)
+	(role concrete))
+
+(defclass Developer
+	(is-a USER)
+	(role concrete)
+	(single-slot name_
+;+		(comment "Name of the app")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Operative_system
+	(is-a USER)
+	(role concrete)
+	(single-slot name_
+;+		(comment "Name of the app")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot version
+		(type FLOAT)
+		(range 1.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
