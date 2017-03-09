@@ -1,0 +1,119 @@
+; Wed Mar 08 21:42:56 CET 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Jess+engine] of  %3AJESS-ENGINE
+)
+
+([KB_686024_Class12] of  Developer
+
+	(name "Disney"))
+
+([KB_686024_Class14] of  Developer
+
+	(name "Electronics Arts"))
+
+([KB_686024_Class15] of  Developer
+
+	(name "Valve"))
+
+([KB_686024_Class16] of  Developer
+
+	(name "YouTube"))
+
+([KB_686024_Class21] of  Operative_system
+
+	(name "Android")
+	(version 4.0))
+
+([KB_686024_Class24] of  Operative_system
+
+	(name "iOS")
+	(version 7.0))
+
+([KB_686024_Class25] of  Game
+
+	(developer [KB_686024_Class26])
+	(download 106590)
+	(name "Clash of Clans")
+	(operative_system [KB_686024_Class24])
+	(pegi 13)
+	(price 0.0)
+	(score 4.4))
+
+([KB_686024_Class26] of  Developer
+
+	(name "Supercell"))
+
+([KB_686024_Class27] of  Social_network
+
+	(developer [KB_686024_Class28])
+	(download 19208)
+	(name "Twiter")
+	(operative_system [KB_686024_Class21])
+	(pegi 4)
+	(price 0.0)
+	(score 2.8))
+
+([KB_686024_Class28] of  Developer
+
+	(name "Twiter Inc."))
+
+([KB_686024_Class29] of  Music
+
+	(developer [KB_686024_Class30])
+	(download 1562345)
+	(name "Spotify")
+	(operative_system [KB_686024_Class24])
+	(pegi 13)
+	(price 15.0)
+	(score 4.8))
+
+([KB_686024_Class30] of  Developer
+
+	(name "Spotify Ltd."))
+
+([KB_686024_Class32] of  Travel
+
+	(developer [KB_686024_Class33])
+	(download 152364)
+	(name "Air Farnce")
+	(operative_system [KB_686024_Class24])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5))
+
+([KB_686024_Class33] of  Developer
+
+	(name "Societe Air France S.A."))
+
+([KB_686024_Class34] of  Video
+
+	(developer [KB_686024_Class16])
+	(download 15623548)
+	(name "YouTube")
+	(operative_system [KB_686024_Class21])
+	(pegi 13)
+	(price 0.0)
+	(score 5.0))
+
+([KB_686024_Class38] of  Video
+
+	(developer [KB_686024_Class12])
+	(download 1662348)
+	(name "Disney Channel")
+	(operative_system [KB_686024_Class21])
+	(pegi 3)
+	(price 0.0)
+	(score 4.0))
+
+([KB_686024_Class39] of  Game
+
+	(developer [KB_686024_Class14])
+	(download 1000005)
+	(name "Need for Speed")
+	(operative_system [KB_686024_Class21])
+	(pegi 4)
+	(price 5.99)
+	(score 2.5))
