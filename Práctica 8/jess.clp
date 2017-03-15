@@ -1,13 +1,18 @@
 (defclass Developer (is-a :THING)
 	(slot name (type string)))
+
+(defclass Operative_system (is-a :THING)
+	(slot name (type string))
+	(slot version (type float)))
 	
 (defclass App (is-a :THING)
 	(slot download (type integer))
 	(slot name (type string))
-	(multislot operative_system (type symbol) (allowed-values IOS Android Windows))  
 	(slot pegi (type integer))
 	(slot price (type float))
-	(slot score (type float)))
+	(slot score (type float))
+	(slot operative_system (type instance) (allowed-classes Operative_system))
+	(slot developer (type instance) (allowed-classes Developer)))
 
 (defclass Game (is-a App))
 (defclass Music (is-a App))
@@ -17,25 +22,26 @@
 
 
 
-;; cuestion 1, carga de instancias desde jess
+*************************************************************
+*************************************************************
 
-(mapclass Game)
+(mapclass Operative_system)
 
-(deftemplate GameJess
-	(slot download (type integer))
+(deftemplate OperativeSystemJess
 	(slot name (type string))
-	(multislot operative_system (type symbol) (allowed-values IOS Android Windows))  
-	(slot pegi (type integer))
-	(slot price (type float))
-	(slot score (type float)))
+	(slot version (type float)))
+	
+(deffacts initial-os "Initial instances of class Operative_system"
+	(OperativeSystemJess (name "iOS") (version 10.0))
+	(OperativeSystemJess (name "Android 2") (version 4.0)))
 
-(deffacts initial-games
-	(GameJess (name "Clash of Clans") (download 125) (operative_system IOS) (pegi 13) (price 0.0) (score 4.4)))
-
-(defrule load-apps
-	(GameJess (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score))
+(defrule load-os
+	(OperativeSystemJess (name ?name) (version ?version))
 	=>
-	(make-instance of Game (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score)))
+	(make-instance of Operative_system (name ?name) (version ?version)))
+
+*************************************************************
+*************************************************************
 
 (mapclass Developer)
 
@@ -43,9 +49,32 @@
 	(slot name (type string)))
 
 (deffacts initial-developers
-	(DeveloperJess (name "Disney")))
+	(DeveloperJess (name "Disney"))
+	(DeveloperJess (name "Electronic Arts")))
 
 (defrule load-developers
 	(DeveloperJess (name ?name))
 	=>
 	(make-instance of Developer (name ?name)))
+	
+*************************************************************
+*************************************************************
+
+(mapclass Game)
+
+(deftemplate GameJess
+	(slot download (type integer))
+	(slot name (type string))
+	(slot pegi (type integer))
+	(slot price (type float))
+	(slot score (type float))
+	(slot operative_system (type instance) (allowed-classes Operative_system))
+	(slot developer (type instance) (allowed-classes Developer)))
+
+(deffacts initial-games "Initial instances of class App::Game"
+	(GameJess (name "Juego 1") (download 125465) (operative_system iOS) (pegi 13) (price 0.0) (score 4.4) (developer Disney)))
+
+(defrule load-apps
+	(GameJess (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer))
+	=>
+	(make-instance of Game (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer)))
