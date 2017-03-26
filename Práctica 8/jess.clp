@@ -12,161 +12,332 @@
 	(slot price (type float))
 	(slot score (type float))
 	(slot operative_system (type instance) (allowed-classes Operative_system))
-	(slot developer (type instance) (allowed-classes Developer)))
+	(slot developer (type instance) (allowed-classes Developer))
+	(slot type (type symbol) (allowed-values App Game Action Adventure Arcade TableGame Cards Music Social_network Rock Pop Electronic Travel Video Book Art Biography Teen Comic Informatic)))
 
 (defclass Game (is-a App))
+(defclass Action (is-a Game))
+(defclass Adventure(is-a Game))
+(defclass Arcade(is-a Game))
+(defclass TableGame (is-a Game))
+(defclass Cards(is-a Game))
+
 (defclass Music (is-a App))
+(defclass Rock (is-a Music))
+(defclass Pop (is-a Music))
+(defclass Electronic(is-a Music))
+
 (defclass Social_network (is-a App))
 (defclass Travel (is-a App))
 (defclass Video (is-a App))
 
-
-(mapclass Operative_system)
-
-(deftemplate OperativeSystemJess
-	(slot name)
-	(slot version))
-	
-(deffacts initial-os "Initial instances of class Operative_system"
-	(OperativeSystemJess (name "iOS") (version 10.0))
-	(OperativeSystemJess (name "Android") (version 4.0)))
-
-(defrule load-os
-	(OperativeSystemJess (name ?name) (version ?version))
-	=>
-	(make-instance of Operative_system (name ?name) (version ?version)))
-
+(defclass Book (is-a App))
+(defclass Art (is-a Book))
+(defclass Biography (is-a Book))
+(defclass Teen (is-a Book))
+(defclass Comic (is-a Book))
+(defclass Informatic (is-a Book))
 
 (mapclass Developer)
 
-(deftemplate DeveloperJess
-	(slot name))
+(deftemplate Jess_developer (slot name))
 
-(deffacts initial-developers
-	(DeveloperJess (name "Disney"))
-	(DeveloperJess (name "YouTube"))
-	(DeveloperJess (name "Electronic Arts")))
+(deffacts ini-devs
+	(Jess_developer (name "Disney")))
 
-(defrule load-developers
-	(DeveloperJess (name ?name))
+(defrule load-devs
+	(Jess_developer (name ?n))
 	=>
-	(make-instance of Developer (name ?name)))
+	(make-instance of Developer(name ?n)))
+	
 
+(mapclass Operative_system)
 
+(deftemplate Jess_OS (slot name) (slot version))
+
+(deffacts ini-OS
+	(Jess_OS (name "Android") (version 2.0)))
+
+(defrule load-OS
+	(Jess_OS (name ?n) (version ?v))
+	=>
+	(make-instance of Operative_system (name ?n) (version ?v)))
+	
+
+(mapclass App)
+
+(deftemplate Jess-App (slot name) (slot developer) (slot download) (slot operative_system) (slot pegi) (slot price) (slot score) (slot type))
+
+(deffacts ini-App
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type App))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Game))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Action))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Adventure))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Arcade))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type TableGame))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Cards))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Music))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Rock))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Pop))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Electronic))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Social_network))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Travel))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Video))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Book))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Art))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Biography))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Teen))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Comic))
+	(Jess-App (name "maps") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Informatic))
+	)
+	
+(defrule load-Apps
+	(Jess-App (name ?n) (download ?d) (pegi ?pegi) (type ?t) (price ?price) (score ?s) (developer ?dev) (operative_system ?os))
+	?h1 <- (object (is-a Developer) (name ?dev))
+	?h2 <- (object (is-a Operative_system) (name ?os))
+	=>
+	(make-instance of App (name ?n) (developer ?h1)(download ?d) (operative_system ?h2)(pegi ?pegi) (price ?price) (score ?s) (type ?t))
+)
+
+(mapclass :THING)
 (mapclass Game)
 
-(deftemplate GameJess
-	(slot download)
-	(slot name)
-	(slot pegi)
-	(slot price)
-	(slot score)
-	(slot os_name)
-	(slot os_version)
-	(slot dev_name))
+(defrule MAIN::set-game
+ (object (is-a App) (OBJECT ?app) (type Game))
+ (object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $?list))
+ =>
+ (slot-set "Game" :DIRECT-INSTANCES
+ (insert$ ?list (+ 1 (length$ ?list)) ?app)))
 
-(deffacts initial-game-app "Initial instances of class App::Game"
-	(GameJess (name "Juego 1") (download 125465) (os_name "iOS") (os_version 10)(pegi 13) (price 0.0) (score 4.4) (dev_name "Disney")))
+ 
+(mapclass Action)
 
-(defrule load-game
-	(GameJess (name ?name) (download ?download)	(pegi ?pegi) (price ?price) (score ?score)
-	=>
-	(make-instance of Game (name ?name) (download ?download) (pegi ?pegi) (price ?price) (score ?score))))
+(defrule MAIN::set-action-superclass
+ (object (is-a App) (OBJECT ?app) (type Action))
+ (object (is-a :STANDARD-CLASS) (:NAME "Action") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Action" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Game" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+ 
+ 
+ (mapclass Adventure)
 
-(defrule load-game-dev
-	(GameJess (name ?name) (dev_name ?dev_name))
-	(object (is-a Developer) (name ?dev_name) (OBJECT ?dev))
-	(object (is-a Game) (name ?name) (developer ?dev_inst) (OBJECT ?g))
-	(test (member$ (Developer (name ?dev_name)) ?dev))
-	=>
-	(slot-insert$ ?g (developer (name ?dev_name))))
-	
-(defrule load-game-os
-	(GameJess (name ?name) (os_name ?os_name) (os_version ?os_version))
-	(object (is-a Operative_system) (name ?os_name) (version ?os_version) (OBJECT ?os))
-	(object (is-a Game) (name ?name) (operative_system ?op_sys) (OBJECT ?g))
-	(test (member$ (Operative_system (name ?os_name) (version ?os_version)) ?os))
-	=>
-	(slot-insert$ ?g (operative_system (name ?os_name) (version ?os_version))))
-	
+ (defrule MAIN::set-Adventure-superclass
+ (object (is-a App) (OBJECT ?app) (type Adventure))
+ (object (is-a :STANDARD-CLASS) (:NAME "Adventure") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Adventure" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Game" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+ 
+ 
+ (mapclass Arcade)
+ 
+ (defrule MAIN::set-Arcade-superclass
+ (object (is-a App) (OBJECT ?app) (type Arcade))
+ (object (is-a :STANDARD-CLASS) (:NAME "Arcade") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Arcade" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Game" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+ 
+ 
+ (mapclass TableGame)
+ 
+ (defrule MAIN::set-TableGame-superclass
+ (object (is-a App) (OBJECT ?app) (type TableGame))
+ (object (is-a :STANDARD-CLASS) (:NAME "TableGame") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "TableGame" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Game" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+ 
+ 
+ (mapclass Cards)
+ 
+ (defrule MAIN::set-Cards-superclass
+ (object (is-a App) (OBJECT ?app) (type Cards))
+ (object (is-a :STANDARD-CLASS) (:NAME "Cards") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Cards" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Game" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+  
+ 
+
 (mapclass Music)
 
-(deftemplate MusicJess
-	(slot download)
-	(slot name)
-	(slot pegi)
-	(slot price)
-	(slot score)
-	(slot operative_system)
-	(slot developer))
+(defrule MAIN::set-Music
+ (object (is-a App) (OBJECT ?app) (type Music))
+ (object (is-a :STANDARD-CLASS) (:NAME "Music") (:DIRECT-INSTANCES $?list))
+ =>
+ (slot-set "Music" :DIRECT-INSTANCES
+ (insert$ ?list (+ 1 (length$ ?list)) ?app)))
 
-(deffacts intial-music-app "Initial instances of class App::Music"
-	(MusicJess (name "Music 1") (download 123) (operative_system Android) (pegi 4) (price 0.0) (score 3.2) (developer YouTube)))
+ 
+(mapclass Pop)
 
-(defrule load-music
-	(MusicJess (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer))
-	=>
-	(make-instance of Music (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer)))
+(defrule MAIN::set-Pop-superclass
+ (object (is-a App) (OBJECT ?app) (type Pop))
+ (object (is-a :STANDARD-CLASS) (:NAME "Pop") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Music") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Pop" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Music" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+ 
 
+(mapclass Rock)
 
+(defrule MAIN::set-Rock-superclass
+ (object (is-a App) (OBJECT ?app) (type Rock))
+ (object (is-a :STANDARD-CLASS) (:NAME "Rock") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Music") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Rock" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Music" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+ 
+ 
+ (mapclass Electronic)
+
+(defrule MAIN::set-Electronic-superclass
+ (object (is-a App) (OBJECT ?app) (type Electronic))
+ (object (is-a :STANDARD-CLASS) (:NAME "Electronic") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Music") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Electronic" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Music" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+ 
 
 (mapclass Social_network)
 
-(deftemplate Social_networkJess
-	(slot download)
-	(slot name)
-	(slot pegi)
-	(slot price)
-	(slot score)
-	(slot operative_system)
-	(slot developer))
+(defrule MAIN::set-Social_network
 
-(deffacts intial-social_network-app "Initial instances of class App::Social_network"
-	(Social_networkJess (name "Social_network 1") (download 123) (operative_system Android) (pegi 4) (price 0.0) (score 3.2) (developer YouTube)))
+ (object (is-a App) (OBJECT ?app) (type Social_network))
+ (object (is-a :STANDARD-CLASS) (:NAME "Social_network") (:DIRECT-INSTANCES $?list))
+ =>
+ (slot-set "Social_network" :DIRECT-INSTANCES
+ (insert$ ?list (+ 1 (length$ ?list)) ?app)))
+ 
+ (mapclass Travel)
+(defrule MAIN::set-Travel
 
-(defrule load-social_network
-	(Social_networkJess (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer))
-	=>
-	(make-instance of Social_network (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer)))
-
-
-(mapclass Travel)
-
-(deftemplate TravelJess
-	(slot download)
-	(slot name)
-	(slot pegi)
-	(slot price)
-	(slot score)
-	(slot operative_system)
-	(slot developer))
-
-(deffacts intial-travel-app "Initial instances of class App::Travel"
-	(TravelJess (name "Travel 1") (download 123) (operative_system Android) (pegi 4) (price 0.0) (score 3.2) (developer YouTube)))
-
-(defrule load-travel
-	(TravelJess (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer))
-	=>
-	(make-instance of Travel (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer)))
+ (object (is-a App) (OBJECT ?app) (type Travel))
+ (object (is-a :STANDARD-CLASS) (:NAME "Travel") (:DIRECT-INSTANCES $?list))
+ =>
+ (slot-set "Travel" :DIRECT-INSTANCES
+ (insert$ ?list (+ 1 (length$ ?list)) ?app)))
 
 
 (mapclass Video)
+  
+ (defrule MAIN::set-Video
 
-(deftemplate VideoJess
-	(slot download)
-	(slot name)
-	(slot pegi)
-	(slot price)
-	(slot score)
-	(slot operative_system)
-	(slot developer))
+ (object (is-a App) (OBJECT ?app) (type Video))
+ (object (is-a :STANDARD-CLASS) (:NAME "Video") (:DIRECT-INSTANCES $?list))
+ =>
+ (slot-set "Video" :DIRECT-INSTANCES
+ (insert$ ?list (+ 1 (length$ ?list)) ?app)))
+ 
+ 
+(mapclass Book)
+  
+ (defrule MAIN::set-Book
 
-(deffacts intial-video-app "Initial instances of class App::Video"
-	(VideoJess (name "Video 1") (download 123) (operative_system Android) (pegi 4) (price 0.0) (score 3.2) (developer YouTube)))
+ (object (is-a App) (OBJECT ?app) (type Book))
+ (object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list))
+ =>
+ (slot-set "Book" :DIRECT-INSTANCES
+ (insert$ ?list (+ 1 (length$ ?list)) ?app))) 
+ 
+ 
+(mapclass Art)
 
-(defrule load-video
-	(VideoJess (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer))
-	=>
-	(make-instance of Video (name ?name) (download ?download) (operative_system ?operative_system) (pegi ?pegi) (price ?price) (score ?score) (developer ?developer)))
+ (defrule MAIN::set-Art-superclass
+ (object (is-a App) (OBJECT ?app) (type Art))
+ (object (is-a :STANDARD-CLASS) (:NAME "Art") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Art" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Book" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
+ 
+ (mapclass Biography)
 
+ (defrule MAIN::set-Biography-superclass
+ (object (is-a App) (OBJECT ?app) (type Biography))
+ (object (is-a :STANDARD-CLASS) (:NAME "Biography") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Biography" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Book" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
+ 
+  (mapclass Teen)
 
+ (defrule MAIN::set-Teen-superclass
+ (object (is-a App) (OBJECT ?app) (type Teen))
+ (object (is-a :STANDARD-CLASS) (:NAME "Teen") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Teen" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Book" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
+
+   (mapclass Comic)
+
+ (defrule MAIN::set-Comic-superclass
+ (object (is-a App) (OBJECT ?app) (type Comic))
+ (object (is-a :STANDARD-CLASS) (:NAME "Comic") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Comic" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Book" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
+
+ 
+ 
+   (mapclass Informatic)
+
+ (defrule MAIN::set-Informatic-superclass
+ (object (is-a App) (OBJECT ?app) (type Informatic))
+ (object (is-a :STANDARD-CLASS) (:NAME "Informatic") (:DIRECT-INSTANCES $?list1))
+ (object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list2))
+ =>
+ (slot-set "Informatic" :DIRECT-INSTANCES
+ (insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
+ 
+ (slot-set "Book" :DIRECT-INSTANCES
+ (insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
