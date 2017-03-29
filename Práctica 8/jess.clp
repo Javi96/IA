@@ -15,6 +15,13 @@
 	(slot developer (type instance) (allowed-classes Developer))
 	(slot type (type symbol) (allowed-values App Game Action Adventure Arcade TableGame Cards Music Social_network Rock Pop Electronic Travel Video Book Art Biography Comic Informatic)))
 
+(defclass User (is-a :THING)
+	(slot name (type string))
+	(slot age (type integer))
+	(slot device (type instance) (allowed-classes Operative_system))
+	(slot language (type symbol) (allowed-values Spain Germany French English))
+	(slot pleasure (type symbol) (allowed-values Travel Technology Film Music)))
+
 (defclass Game (is-a App))
 (defclass Action (is-a Game))
 (defclass Adventure(is-a Game))
@@ -36,6 +43,18 @@
 (defclass Biography (is-a Book))
 (defclass Comic (is-a Book))
 (defclass Informatic (is-a Book))
+
+(mapclass User)
+
+(defrule recom-user
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom))
+	(object (is-a App) (OBJECT ?app) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(object (is-a Operative_system) (OBJECT ?OS) (name ?nameOS))
+	(test (not (member$ ?app $?recom)))
+	=>
+	(printout t "Me llamo " ?name " Tengo " ?age " años y uso" ?nameOS crlf)
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?app)
+	)
 
 (mapclass Developer)
 
@@ -340,13 +359,3 @@
 	(insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
 	(slot-set "Book" :DIRECT-INSTANCES
 	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
-	
-	
-(defrule set-recomendations
-	(object (is-a Thing) (id ?id) (OBJECT ?h1))
-	(test (< ?id 40))
-	(object (is-a Box) (name "cajaA") (things $?t)(OBJECT ?BOX))
-	(test (not (member$ ?h1 $?t)))	
-	=>
-	(printout t "Joder " ?h1 crlf)
-	(slot-insert$ ?BOX things (+ 1 (length$ ?t)) ?h1))
