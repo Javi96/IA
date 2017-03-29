@@ -13,7 +13,7 @@
 	(slot score (type float))
 	(slot operative_system (type instance) (allowed-classes Operative_system))
 	(slot developer (type instance) (allowed-classes Developer))
-	(slot type (type symbol) (allowed-values App Game Action Adventure Arcade TableGame Cards Music Social_network Rock Pop Electronic Travel Video Book Art Biography Teen Comic Informatic)))
+	(slot type (type symbol) (allowed-values App Game Action Adventure Arcade TableGame Cards Music Social_network Rock Pop Electronic Travel Video Book Art Biography Comic Informatic)))
 
 (defclass Game (is-a App))
 (defclass Action (is-a Game))
@@ -34,7 +34,6 @@
 (defclass Book (is-a App))
 (defclass Art (is-a Book))
 (defclass Biography (is-a Book))
-(defclass Teen (is-a Book))
 (defclass Comic (is-a Book))
 (defclass Informatic (is-a Book))
 
@@ -55,27 +54,22 @@
 	(Jess_developer (name "Gameloft"))
 	(Jess_developer (name "Spotify Ltd"))
 	(Jess_developer (name "AppDreamTeam"))
-	
-	
-	
-	
 	(Jess_developer (name "PSY"))
 	(Jess_developer (name "Smash Mouth"))
 	(Jess_developer (name "Rihanna"))
 	(Jess_developer (name "Facebook"))
 	(Jess_developer (name "Twitter"))
 	(Jess_developer (name "Linkedln"))
-	(Jess_developer (name "Supercell"))
-	(Jess_developer (name "Supercell"))
-	(Jess_developer (name "Supercell"))
-	(Jess_developer (name "Supercell"))
-	(Jess_developer (name "Supercell"))
-	(Jess_developer (name "Supercell"))
-	(Jess_developer (name "Supercell"))
-
-	
-	
-	)
+	(Jess_developer (name "Google"))
+	(Jess_developer (name "IBERIA"))
+	(Jess_developer (name "You Tube"))
+	(Jess_developer (name "Amazon"))
+	(Jess_developer (name "Simon Schama"))
+	(Jess_developer (name "Brandon Boyd"))
+	(Jess_developer (name "Zoltán Géczi"))
+	(Jess_developer (name "John Stevens Cabot Abbott"))
+	(Jess_developer (name "Carlos Burges Ruiz de Gopegui"))
+	(Jess_developer (name "Pere Manel Verdugo Zamora")))
 
 (defrule load-developer
 	(Jess_developer (name ?n))
@@ -107,10 +101,7 @@
 (deffacts ini-App
 	(Jess-App (name "App") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type App))
 	(Jess-App (name "Game") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Game))
-	
-	
-	
-	
+	(Jess-App (name "Comic") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Comic))
 	(Jess-App (name "Clash Royale") (developer "Supercell") (download 33688) (operative_system "Android") (pegi 9) (price 0.0) (score 4.5) (type Action))
 	(Jess-App (name "Super Mario Run") (developer "Nintendo") (download 7164) (operative_system "iOS") (pegi 4) (price 9.99) (score 2.0) (type Action))
 	(Jess-App (name "Fruit Ninja") (developer "Halfbrick Studios") (download 9342) (operative_system "Windows Phone") (pegi 4) (price 0.0) (score 4.5) (type Action))
@@ -130,23 +121,20 @@
 	(Jess-App (name "Facebook") (developer "Facebook") (download 2165451) (operative_system "iOS") (pegi 9) (price 0.0) (score 4.8) (type Social_network))
 	(Jess-App (name "Twitter") (developer "Twitter") (download 9521784) (operative_system "Android") (pegi 9) (price 0.0) (score 4.4) (type Social_network))
 	(Jess-App (name "Linkedln") (developer "Linkedln") (download 326594) (operative_system "BlackBerry") (pegi 9) (price 0.0) (score 4.3) (type Social_network))
-
-	
-	
-	
-	
-	
-	(Jess-App (name "Travel") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Travel))
-	(Jess-App (name "Video") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Video))
+	(Jess-App (name "Google Earth") (developer "Google") (download 65491327) (operative_system "Android") (pegi 4) (price 0.0) (score 4.5) (type Travel))
+	(Jess-App (name "Iberia") (developer "IBERIA") (download 459865) (operative_system "iOS") (pegi 4) (price 0.0) (score 1.5) (type Travel))
+	(Jess-App (name "You Tube") (developer "You Tube") (download 789542) (operative_system "iOS") (pegi 4) (price 0.0) (score 5.0) (type Video))
+	(Jess-App (name "Twitch") (developer "Amazon") (download 3265415) (operative_system "Symbian") (pegi 4) (price 0.0) (score 5.0) (type Video))
 	(Jess-App (name "Book") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Book))
-	(Jess-App (name "Art") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Art))
-	(Jess-App (name "Biography") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Biography))
-	(Jess-App (name "Teen") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Teen))
-	(Jess-App (name "Comic") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Comic))
-	(Jess-App (name "Informatic") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Informatic)))
+	(Jess-App (name "The Face of Britain") (developer "Simon Schama") (download 8654) (operative_system "BlackBerry") (pegi 4) (price 4.0) (score 3.0) (type Art))
+	(Jess-App (name "So the Echo") (developer "Brandon Boyd") (download 45) (operative_system "Symbian") (pegi 4) (price 45.90) (score 4.5) (type Art))
+	(Jess-App (name "Steve Jobs") (developer "Zoltán Géczi") (download 465994) (operative_system "iOS") (pegi 4) (price 0.0) (score 4.5) (type Biography))
+	(Jess-App (name "Benjamin Franklin") (developer "John Stevens Cabot Abbott") (download 4569) (operative_system "Android") (pegi 4) (price 0.0) (score 3.0) (type Biography))
+	(Jess-App (name "Automator para OS X") (developer "Carlos Burges Ruiz de Gopegui") (download 4253387) (operative_system "iOS") (pegi 4) (price 5.0) (score 4.0) (type Informatic))
+	(Jess-App (name "iCloud Beta") (developer "Pere Manel Verdugo Zamora") (download 574228) (operative_system "iOS") (pegi 4) (price 6.5) (score 4.0) (type Informatic)))
 	
 (defrule load-Apps
-	(Jess-App (name ?n) (download ?download) (pegi ?pegi) (type ?type) (price ?price) (score ?score) (developer ?dev) (operative_system ?os))
+	(Jess-App (name ?name) (download ?download) (pegi ?pegi) (type ?type) (price ?price) (score ?score) (developer ?dev) (operative_system ?os))
 	?h1 <- (object (is-a Developer) (name ?dev))
 	?h2 <- (object (is-a Operative_system) (name ?os))
 	=>
@@ -325,17 +313,6 @@
 	(object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list2))
 	=>
 	(slot-set "Biography" :DIRECT-INSTANCES
-	(insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
-	(slot-set "Book" :DIRECT-INSTANCES
-	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
- 
-(mapclass Teen)
-(defrule MAIN::set-Teen-superclass
-	(object (is-a App) (OBJECT ?app) (type Teen))
-	(object (is-a :STANDARD-CLASS) (:NAME "Teen") (:DIRECT-INSTANCES $?list1))
-	(object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $?list2))
-	=>
-	(slot-set "Teen" :DIRECT-INSTANCES
 	(insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
 	(slot-set "Book" :DIRECT-INSTANCES
 	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
