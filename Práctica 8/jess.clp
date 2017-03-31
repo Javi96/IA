@@ -1,60 +1,4 @@
-(defclass Developer (is-a :THING)
-	(slot name (type string)))
-
-(defclass Operative_system (is-a :THING)
-	(slot name (type string))
-	(slot version (type float)))
 	
-(defclass App (is-a :THING)
-	(slot download (type integer))
-	(slot name (type string))
-	(slot pegi (type integer))
-	(slot price (type float))
-	(slot score (type float))
-	(slot operative_system (type instance) (allowed-classes Operative_system))
-	(slot developer (type instance) (allowed-classes Developer))
-	(slot type (type symbol) (allowed-values App Game Action Adventure Arcade TableGame Cards Music Social_network Rock Pop Electronic Travel Video Book Art Biography Comic Informatic)))
-
-(defclass User (is-a :THING)
-	(slot name (type string))
-	(slot age (type integer))
-	(slot device (type instance) (allowed-classes Operative_system))
-	(slot language (type symbol) (allowed-values Spain Germany French English))
-	(slot pleasure (type symbol) (allowed-values Travel Technology Film Music)))
-
-(defclass Game (is-a App))
-(defclass Action (is-a Game))
-(defclass Adventure(is-a Game))
-(defclass Arcade(is-a Game))
-(defclass TableGame (is-a Game))
-(defclass Cards(is-a Game))
-
-(defclass Music (is-a App))
-(defclass Rock (is-a Music))
-(defclass Pop (is-a Music))
-(defclass Electronic(is-a Music))
-
-(defclass Social_network (is-a App))
-(defclass Travel (is-a App))
-(defclass Video (is-a App))
-
-(defclass Book (is-a App))
-(defclass Art (is-a Book))
-(defclass Biography (is-a Book))
-(defclass Comic (is-a Book))
-(defclass Informatic (is-a Book))
-
-(mapclass User)
-
-(defrule recom-user
-	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom))
-	(object (is-a App) (OBJECT ?app) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
-	(object (is-a Operative_system) (OBJECT ?OS) (name ?nameOS))
-	(test (not (member$ ?app $?recom)))
-	=>
-	(printout t "Me llamo " ?name " Tengo " ?age " años y uso" ?nameOS crlf)
-	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?app)
-	)
 
 (mapclass Developer)
 
@@ -359,3 +303,15 @@
 	(insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
 	(slot-set "Book" :DIRECT-INSTANCES
 	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
+
+(mapclass User)
+
+(defrule recom-user-Travels
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure Travel))
+	(object (is-a App) (OBJECT ?app) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(object (is-a Operative_system) (OBJECT ?OS) (name ?nameOS))
+	(test (not (member$ ?app $?recom)))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?app)
+)
+
