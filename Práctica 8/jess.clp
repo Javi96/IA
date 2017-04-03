@@ -1,10 +1,9 @@
-	
-
 (mapclass Developer)
 
-(deftemplate Jess_developer (slot name))
+(deftemplate Jess_developer "Class definition for developers"
+	(slot name))
 
-(deffacts initial-developer
+(deffacts initial-developer "Initial developers in the system"
 	(Jess_developer (name "Supercell"))
 	(Jess_developer (name "Nintendo"))	
 	(Jess_developer (name "Halfbrick Studios"))
@@ -34,72 +33,102 @@
 	(Jess_developer (name "Carlos Burges Ruiz de Gopegui"))
 	(Jess_developer (name "Pere Manel Verdugo Zamora")))
 
-(defrule load-developer
-	(Jess_developer (name ?n))
+(defrule load-developer "Creates instances from the developer template Jess in Protégé"
+	(Jess_developer (name ?name))
 	=>
-	(make-instance of Developer(name ?n)))
+	(make-instance of Developer(name ?name)))
 	
-
 (mapclass Operative_system)
 
-(deftemplate Jess_Operative_system (slot name) (slot version))
+(deftemplate Jess_operative_system "Class definition for operative systems"
+	(slot name) 
+	(slot version))
 
-(deffacts initial-operative_system
-	(Jess_Operative_system (name "Android") (version 4.4))
-	(Jess_Operative_system (name "iOS") (version 10.0))
-	(Jess_Operative_system (name "Windows Phone") (version 8.1))
-	(Jess_Operative_system (name "BlackBerry") (version 5.0))
-	(Jess_Operative_system (name "Symbian") (version 6.0)))
+(deffacts initial-operative-system "Initial operative systems in the system"
+	(Jess_operative_system (name "Android") (version 1))
+	(Jess_operative_system (name "Android") (version 2))
+	(Jess_operative_system (name "Android") (version 3))
+	(Jess_operative_system (name "Android") (version 4))
+	(Jess_operative_system (name "Android") (version 5))
+	(Jess_operative_system (name "Android") (version 6))
+	(Jess_operative_system (name "Android") (version 7))
+	(Jess_operative_system (name "Android") (version 8))
+	(Jess_operative_system (name "iOS") (version 1))
+	(Jess_operative_system (name "iOS") (version 2))
+	(Jess_operative_system (name "iOS") (version 3))
+	(Jess_operative_system (name "iOS") (version 4))
+	(Jess_operative_system (name "iOS") (version 5))
+	(Jess_operative_system (name "iOS") (version 6))
+	(Jess_operative_system (name "iOS") (version 7))
+	(Jess_operative_system (name "iOS") (version 8))
+	(Jess_operative_system (name "iOS") (version 9))
+	(Jess_operative_system (name "iOS") (version 10))
+	(Jess_operative_system (name "Windows Phone") (version 7))
+	(Jess_operative_system (name "Windows Phone") (version 8))
+	(Jess_operative_system (name "BlackBerry") (version 1))
+	(Jess_operative_system (name "BlackBerry") (version 5))
+	(Jess_operative_system (name "BlackBerry") (version 6))
+	(Jess_operative_system (name "BlackBerry") (version 7))
+	(Jess_operative_system (name "Symbian") (version 1))
+	(Jess_operative_system (name "Symbian") (version 6))
+	(Jess_operative_system (name "Symbian") (version 7))
+	(Jess_operative_system (name "Symbian") (version 8)))
 
-(defrule load-OS
-	(Jess_Operative_system (name ?n) (version ?v))
+(defrule load-operative-system "Creates instances from the operative system template Jess in Protégé"
+	(Jess_operative_system (name ?name) (version ?version))
 	=>
-	(make-instance of Operative_system (name ?n) (version ?v)))
+	(make-instance of Operative_system (name ?name) (version ?version)))
 	
 
 (mapclass App)
 
-(deftemplate Jess-App (slot name) (slot developer) (slot download) (slot operative_system) (slot pegi) (slot price) (slot score) (slot type))
+(deftemplate Jess_app "Class definition for apps"
+	(slot name) 
+	(slot developer) 
+	(slot download) 
+	(slot operative_system) 
+	(slot version) 
+	(slot pegi) 
+	(slot price) 
+	(slot score) 
+	(slot type))
 
 (deffacts ini-App
-	(Jess-App (name "App") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type App))
-	(Jess-App (name "Game") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Game))
-	(Jess-App (name "Comic") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Comic))
-	(Jess-App (name "Clash Royale") (developer "Supercell") (download 33688) (operative_system "Android") (pegi 9) (price 0.0) (score 4.5) (type Action))
-	(Jess-App (name "Super Mario Run") (developer "Nintendo") (download 7164) (operative_system "iOS") (pegi 4) (price 9.99) (score 2.0) (type Action))
-	(Jess-App (name "Fruit Ninja") (developer "Halfbrick Studios") (download 9342) (operative_system "Windows Phone") (pegi 4) (price 0.0) (score 4.5) (type Action))
-	(Jess-App (name "Plants vs. Zombies 2") (developer "Electronic Arts ") (download 19141) (operative_system "Android") (pegi 9) (price 0.0) (score 4.8) (type Adventure))
-	(Jess-App (name "Minecraft: Pocket Edition") (developer "Mojang AB") (download 6835 ) (operative_system "BlackBerry") (pegi 9) (price 6.99) (score 4.0) (type Adventure))
-	(Jess-App (name "Candy Crush Saga") (developer "King") (download 63887 ) (operative_system "Symbian") (pegi 4) (price 0.0) (score 4.0) (type Arcade))
-	(Jess-App (name "Batman: Arkham Origins") (developer "Warner Bros") (download 593 ) (operative_system "Android") (pegi 9) (price 0.0) (score 4.0) (type Arcade))
-	(Jess-App (name "Apalabrados") (developer "Etermax") (download 86187 ) (operative_system "Symbian") (pegi 4) (price 0.0) (score 4.5) (type TableGame))
-	(Jess-App (name "2048") (developer "Ketchapp") (download 4643 ) (operative_system "Android") (pegi 4) (price 0.0) (score 4.5) (type TableGame))
-	(Jess-App (name "UNO & Friends") (developer "Gameloft") (download 4916 ) (operative_system "iOS") (pegi 9) (price 1.0) (score 4.0) (type Cards))
-	(Jess-App (name "MORTAL KOMBAT X") (developer "Warner Bros") (download 457897) (operative_system "iOS") (pegi 18) (price 15.00) (score 1.5) (type Cards))
-	(Jess-App (name "Spotify Music") (developer "Spotify Ltd") (download 12648) (operative_system "Android") (pegi 4) (price 0.0) (score 5.0) (type Music))
-	(Jess-App (name "iMusic ") (developer "AppDreamTeam") (download 453) (operative_system "BlackBerry") (pegi 4) (price 0.0) (score 2.0) (type Music))
-	(Jess-App (name "All Stars") (developer "Smash Mouth") (download 496258) (operative_system "Windows Phone") (pegi 4) (price 5.20) (score 5.0) (type Rock))
-	(Jess-App (name "Gangnam Style") (developer "PSY") (download 169487562) (operative_system "iOS") (pegi 9) (price 1.20) (score 3.0) (type Pop))
-	(Jess-App (name "Loud") (developer "Rihanna") (download 123654884) (operative_system "Android") (pegi 4) (price 1.70) (score 5.0) (type Electronic))
-	(Jess-App (name "Facebook") (developer "Facebook") (download 2165451) (operative_system "iOS") (pegi 9) (price 0.0) (score 4.8) (type Social_network))
-	(Jess-App (name "Twitter") (developer "Twitter") (download 9521784) (operative_system "Android") (pegi 9) (price 0.0) (score 4.4) (type Social_network))
-	(Jess-App (name "Linkedln") (developer "Linkedln") (download 326594) (operative_system "BlackBerry") (pegi 9) (price 0.0) (score 4.3) (type Social_network))
-	(Jess-App (name "Google Earth") (developer "Google") (download 65491327) (operative_system "Android") (pegi 4) (price 0.0) (score 4.5) (type Travel))
-	(Jess-App (name "Iberia") (developer "IBERIA") (download 459865) (operative_system "iOS") (pegi 4) (price 0.0) (score 1.5) (type Travel))
-	(Jess-App (name "You Tube") (developer "You Tube") (download 789542) (operative_system "iOS") (pegi 4) (price 0.0) (score 5.0) (type Video))
-	(Jess-App (name "Twitch") (developer "Amazon") (download 3265415) (operative_system "Symbian") (pegi 4) (price 0.0) (score 5.0) (type Video))
-	(Jess-App (name "Book") (developer "Disney") (download 200) (operative_system "Android") (pegi 12) (price 1.20) (score 2.0) (type Book))
-	(Jess-App (name "The Face of Britain") (developer "Simon Schama") (download 8654) (operative_system "BlackBerry") (pegi 4) (price 4.0) (score 3.0) (type Art))
-	(Jess-App (name "So the Echo") (developer "Brandon Boyd") (download 45) (operative_system "Symbian") (pegi 4) (price 45.90) (score 4.5) (type Art))
-	(Jess-App (name "Steve Jobs") (developer "Zoltán Géczi") (download 465994) (operative_system "iOS") (pegi 4) (price 0.0) (score 4.5) (type Biography))
-	(Jess-App (name "Benjamin Franklin") (developer "John Stevens Cabot Abbott") (download 4569) (operative_system "Android") (pegi 4) (price 0.0) (score 3.0) (type Biography))
-	(Jess-App (name "Automator para OS X") (developer "Carlos Burges Ruiz de Gopegui") (download 4253387) (operative_system "iOS") (pegi 4) (price 5.0) (score 4.0) (type Informatic))
-	(Jess-App (name "iCloud Beta") (developer "Pere Manel Verdugo Zamora") (download 574228) (operative_system "iOS") (pegi 4) (price 6.5) (score 4.0) (type Informatic)))
-	
+	(Jess_app (name "Clash Royale") (developer "Supercell") (download 33688) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.5) (type Action))
+	(Jess_app (name "Super Mario Run") (developer "Nintendo") (download 7164) (operative_system "iOS") (version 8) (pegi 10) (price 9.99) (score 2.0) (type Action))
+	(Jess_app (name "Fruit Ninja") (developer "Halfbrick Studios") (download 9342) (operative_system "Windows Phone") (version 8) (pegi 4) (price 0.0) (score 4.5) (type Action))
+	(Jess_app (name "Plants vs. Zombies 2") (developer "Electronic Arts ") (download 19141) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.8) (type Adventure))
+	(Jess_app (name "Minecraft: Pocket Edition") (developer "Mojang AB") (download 6835 ) (operative_system "BlackBerry") (version 7) (pegi 9) (price 6.99) (score 4.0) (type Adventure))
+	(Jess_app (name "Candy Crush Saga") (developer "King") (download 63887 ) (operative_system "Symbian") (version 6) (pegi 4) (price 0.0) (score 4.0) (type Arcade))
+	(Jess_app (name "Batman: Arkham Origins") (developer "Warner Bros") (download 593 ) (operative_system "Android") (version 3) (pegi 9) (price 0.0) (score 4.0) (type Arcade))
+	(Jess_app (name "Apalabrados") (developer "Etermax") (download 86187 ) (operative_system "Symbian") (version 8) (pegi 4) (price 0.0) (score 4.5) (type TableGame))
+	(Jess_app (name "2048") (developer "Ketchapp") (download 4643 ) (operative_system "Android") (version 4) (pegi 4) (price 0.0) (score 4.5) (type TableGame))
+	(Jess_app (name "UNO & Friends") (developer "Gameloft") (download 4916 ) (operative_system "iOS") (version 9) (pegi 9) (price 1.0) (score 4.0) (type Cards))
+	(Jess_app (name "MORTAL KOMBAT X") (developer "Warner Bros") (download 457897) (operative_system "iOS") (version 10) (pegi 18) (price 15.00) (score 1.5) (type Cards))
+	(Jess_app (name "Spotify Music") (developer "Spotify Ltd") (download 12648) (operative_system "Android") (version 7) (pegi 4) (price 0.0) (score 5.0) (type Music))
+	(Jess_app (name "iMusic ") (developer "AppDreamTeam") (download 453) (operative_system "BlackBerry") (version 5) (pegi 4) (price 0.0) (score 2.0) (type Music))
+	(Jess_app (name "All Stars") (developer "Smash Mouth") (download 496258) (operative_system "Windows Phone") (version 8) (pegi 4) (price 5.20) (score 5.0) (type Rock))
+	(Jess_app (name "Gangnam Style") (developer "PSY") (download 169487562) (operative_system "iOS") (version 9) (pegi 9) (price 1.20) (score 3.0) (type Pop))
+	(Jess_app (name "Loud") (developer "Rihanna") (download 123654884) (operative_system "Android") (version 8) (pegi 4) (price 1.70) (score 5.0) (type Electronic))
+	(Jess_app (name "Facebook") (developer "Facebook") (download 2165451) (operative_system "iOS") (version 5) (pegi 9) (price 0.0) (score 4.8) (type Social_network))
+	(Jess_app (name "Twitter") (developer "Twitter") (download 9521784) (operative_system "Android") (version 6) (pegi 9) (price 0.0) (score 4.4) (type Social_network))
+	(Jess_app (name "Linkedln") (developer "Linkedln") (download 326594) (operative_system "BlackBerry") (version 5) (pegi 9) (price 0.0) (score 4.3) (type Social_network))
+	(Jess_app (name "Google Earth") (developer "Google") (download 65491327) (operative_system "Android") (version 3) (pegi 4) (price 0.0) (score 4.5) (type Travel))
+	(Jess_app (name "Iberia") (developer "IBERIA") (download 459865) (operative_system "iOS") (version 4) (pegi 4) (price 0.0) (score 1.5) (type Travel))
+	(Jess_app (name "You Tube") (developer "You Tube") (download 789542) (operative_system "iOS") (version 7) (pegi 4) (price 0.0) (score 5.0) (type Video))
+	(Jess_app (name "Twitch") (developer "Amazon") (download 3265415) (operative_system "Symbian") (version 8) (pegi 4) (price 0.0) (score 5.0) (type Video))
+	(Jess_app (name "Book") (developer "Disney") (download 200) (operative_system "Android") (version 4) (pegi 12) (price 1.20) (score 2.0) (type Book))
+	(Jess_app (name "The Face of Britain") (developer "Simon Schama") (download 8654) (operative_system "BlackBerry") (version 6) (pegi 4) (price 4.0) (score 3.0) (type Art))
+	(Jess_app (name "So the Echo") (developer "Brandon Boyd") (download 45) (operative_system "Symbian") (version 8) (pegi 4) (price 45.90) (score 4.5) (type Art))
+	(Jess_app (name "Steve Jobs") (developer "Zoltán Géczi") (download 465994) (operative_system "iOS") (version 9) (pegi 4) (price 0.0) (score 4.5) (type Biography))
+	(Jess_app (name "Benjamin Franklin") (developer "John Stevens Cabot Abbott") (download 4569) (operative_system "Android") (version 5) (pegi 4) (price 0.0) (score 3.0) (type Biography))
+	(Jess_app (name "Automator para OS X") (developer "Carlos Burges Ruiz de Gopegui") (download 4253387) (operative_system "iOS") (version 6) (pegi 4) (price 5.0) (score 4.0) (type Informatic))
+	(Jess_app (name "iCloud Beta") (developer "Pere Manel Verdugo Zamora") (download 574228) (operative_system "iOS") (version 8) (pegi 4) (price 6.5) (score 4.0) (type Informatic)))
+
 (defrule load-Apps
-	(Jess-App (name ?name) (download ?download) (pegi ?pegi) (type ?type) (price ?price) (score ?score) (developer ?dev) (operative_system ?os))
+	(Jess_app (name ?name) (download ?download) (pegi ?pegi) (type ?type) (price ?price) (score ?score) (developer ?dev) (operative_system ?os) (version ?version))
 	?h1 <- (object (is-a Developer) (name ?dev))
-	?h2 <- (object (is-a Operative_system) (name ?os))
+	?h2 <- (object (is-a Operative_system) (name ?os) (version ?version))
 	=>
 	(make-instance of App (name ?name) (developer ?h1)(download ?download) (operative_system ?h2)(pegi ?pegi) (price ?price) (score ?score) (type ?type)))
 
@@ -278,7 +307,7 @@
 	(slot-set "Biography" :DIRECT-INSTANCES
 	(insert$ ?list1 (+ 1 (length$ ?list1)) ?app))
 	(slot-set "Book" :DIRECT-INSTANCES
-	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app))) 
+	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
 
 (mapclass Comic)
 (defrule MAIN::set-Comic-superclass
@@ -306,12 +335,158 @@
 
 (mapclass User)
 
-(defrule recom-user-Travels
-	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure Travel))
-	(object (is-a App) (OBJECT ?app) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
-	(object (is-a Operative_system) (OBJECT ?OS) (name ?nameOS))
-	(test (not (member$ ?app $?recom)))
+(defrule recom-user-Travels-Read
+	(object (is-a User) (OBJECT ?user) (name ?name) (device ?d) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Travel $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?appOS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	
 	=>
-	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?app)
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
 )
 
+(defrule recom-user-Travels-Adventure
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Travel $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Adventure") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Travels-SN
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Travel $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Social_network") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Music-Music
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Music $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Music") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Music-Arcade
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Music $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Arcade") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Tecnology-Read
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Tecnology $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Informatic") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Tecnology-Game
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Tecnology $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Games-Game
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Games $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Game") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Games-Video
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Games $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Video") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Games-SN
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Games $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Social_network") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+
+(defrule recom-user-Games-Comic
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Games $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Comic") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Film-Comic
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Film $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Comic") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Film-Video
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Film $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Video") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)
+
+(defrule recom-user-Film-Art
+	(object (is-a User) (OBJECT ?user) (name ?name) (age ?age) (device ?OS) (recom $?recom) (pleasure $? Film $?))
+	(object (is-a :STANDARD-CLASS) (:NAME "Art") (:DIRECT-INSTANCES $? ?x $?))
+	(object (is-a App) (OBJECT ?x)(name ?appName) (pegi ?pegi&:(< ?pegi ?age)) (operative_system ?OS))
+	(test (not (member$ ?x $?recom)))
+	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
+	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
+	=>
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
+)

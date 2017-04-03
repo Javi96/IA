@@ -1,4 +1,4 @@
-; Fri Mar 31 14:26:39 CEST 2017
+; Mon Apr 03 21:15:53 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -12,7 +12,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot version
-		(type FLOAT)
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot operative_system
@@ -60,10 +60,10 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot pleasure
+	(multislot pleasure
 		(type SYMBOL)
-		(allowed-values Travel Technology Film Music)
-;+		(cardinality 0 1)
+		(allowed-values Travel Technology Film Music Games)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot type
 		(type SYMBOL)
@@ -216,7 +216,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot version
-		(type FLOAT)
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -245,12 +245,12 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot price
-		(type FLOAT)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot name_
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot price
+		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot developer
@@ -343,16 +343,12 @@
 ;+		(allowed-classes Operative_system)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot pleasure
+	(multislot pleasure
 		(type SYMBOL)
-		(allowed-values Travel Technology Film Music)
-;+		(cardinality 0 1)
+		(allowed-values Travel Technology Film Music Games)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot name_
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot pr8_Class0
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))

@@ -1,0 +1,873 @@
+; Wed Mar 29 18:30:31 CEST 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Jess+engine] of  %3AJESS-ENGINE
+)
+
+([KB_728824_Class100] of  App TableGame Game
+
+	(developer [KB_728824_Class99])
+	(download 86187)
+	(name "Apalabrados")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [KB_728824_Class99])
+	(download 86187)
+	(name "Apalabrados")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [KB_728824_Class99])
+	(download 86187)
+	(name "Apalabrados")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame))
+
+([KB_728824_Class101] of  Developer
+
+	(name "Warner Bros"))
+
+([KB_728824_Class102] of  App Arcade Game
+
+	(developer [KB_728824_Class101])
+	(download 593)
+	(name "Batman: Arkham Origins")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [KB_728824_Class101])
+	(download 593)
+	(name "Batman: Arkham Origins")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [KB_728824_Class101])
+	(download 593)
+	(name "Batman: Arkham Origins")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade))
+
+([KB_728824_Class103] of  App Cards Game
+
+	(developer [KB_728824_Class101])
+	(download 457897)
+	(name "MORTAL KOMBAT X")
+	(operative_system [KB_728824_Class57])
+	(pegi 18)
+	(price 15.0)
+	(score 1.5)
+	(type Cards)
+	(developer [KB_728824_Class101])
+	(download 457897)
+	(name "MORTAL KOMBAT X")
+	(operative_system [KB_728824_Class57])
+	(pegi 18)
+	(price 15.0)
+	(score 1.5)
+	(type Cards)
+	(developer [KB_728824_Class101])
+	(download 457897)
+	(name "MORTAL KOMBAT X")
+	(operative_system [KB_728824_Class57])
+	(pegi 18)
+	(price 15.0)
+	(score 1.5)
+	(type Cards))
+
+([KB_728824_Class104] of  Developer
+
+	(name "King"))
+
+([KB_728824_Class105] of  App Arcade Game
+
+	(developer [KB_728824_Class104])
+	(download 63887)
+	(name "Candy Crush Saga")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [KB_728824_Class104])
+	(download 63887)
+	(name "Candy Crush Saga")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [KB_728824_Class104])
+	(download 63887)
+	(name "Candy Crush Saga")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade))
+
+([KB_728824_Class106] of  Developer
+
+	(name "Mojang AB"))
+
+([KB_728824_Class107] of  App Adventure Game
+
+	(developer [KB_728824_Class106])
+	(download 6835)
+	(name "Minecraft: Pocket Edition")
+	(operative_system [KB_728824_Class55])
+	(pegi 9)
+	(price 6.99)
+	(score 4.0)
+	(type Adventure)
+	(developer [KB_728824_Class106])
+	(download 6835)
+	(name "Minecraft: Pocket Edition")
+	(operative_system [KB_728824_Class55])
+	(pegi 9)
+	(price 6.99)
+	(score 4.0)
+	(type Adventure)
+	(developer [KB_728824_Class106])
+	(download 6835)
+	(name "Minecraft: Pocket Edition")
+	(operative_system [KB_728824_Class55])
+	(pegi 9)
+	(price 6.99)
+	(score 4.0)
+	(type Adventure))
+
+([KB_728824_Class108] of  Developer
+
+	(name "Electronic Arts "))
+
+([KB_728824_Class109] of  App Adventure Game
+
+	(developer [KB_728824_Class108])
+	(download 19141)
+	(name "Plants vs. Zombies 2")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Adventure)
+	(developer [KB_728824_Class108])
+	(download 19141)
+	(name "Plants vs. Zombies 2")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Adventure)
+	(developer [KB_728824_Class108])
+	(download 19141)
+	(name "Plants vs. Zombies 2")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Adventure))
+
+([KB_728824_Class110] of  Developer
+
+	(name "Halfbrick Studios"))
+
+([KB_728824_Class111] of  App Action Game
+
+	(developer [KB_728824_Class110])
+	(download 9342)
+	(name "Fruit Ninja")
+	(operative_system [KB_728824_Class56])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [KB_728824_Class110])
+	(download 9342)
+	(name "Fruit Ninja")
+	(operative_system [KB_728824_Class56])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [KB_728824_Class110])
+	(download 9342)
+	(name "Fruit Ninja")
+	(operative_system [KB_728824_Class56])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Action))
+
+([KB_728824_Class112] of  Developer
+
+	(name "Nintendo"))
+
+([KB_728824_Class113] of  App Action Game
+
+	(developer [KB_728824_Class112])
+	(download 7164)
+	(name "Super Mario Run")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 9.99)
+	(score 2.0)
+	(type Action)
+	(developer [KB_728824_Class112])
+	(download 7164)
+	(name "Super Mario Run")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 9.99)
+	(score 2.0)
+	(type Action)
+	(developer [KB_728824_Class112])
+	(download 7164)
+	(name "Super Mario Run")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 9.99)
+	(score 2.0)
+	(type Action))
+
+([KB_728824_Class114] of  Developer
+
+	(name "Supercell"))
+
+([KB_728824_Class115] of  App Action Game
+
+	(developer [KB_728824_Class114])
+	(download 33688)
+	(name "Clash Royale")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [KB_728824_Class114])
+	(download 33688)
+	(name "Clash Royale")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [KB_728824_Class114])
+	(download 33688)
+	(name "Clash Royale")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.5)
+	(type Action))
+
+([KB_728824_Class116] of  User
+
+	(age 21)
+	(device [KB_728824_Class58])
+	(language Spain)
+	(name "Pedro")
+	(pleasure Music)
+	(recom
+		[KB_728824_Class115]
+		[KB_728824_Class109]
+		[KB_728824_Class102]
+		[KB_728824_Class98]
+		[KB_728824_Class94]
+		[KB_728824_Class86]
+		[KB_728824_Class82]
+		[KB_728824_Class78]
+		[KB_728824_Class64]))
+
+([KB_728824_Class54] of  Operative_system
+
+	(name "Symbian")
+	(version 6.0))
+
+([KB_728824_Class55] of  Operative_system
+
+	(name "BlackBerry")
+	(version 5.0))
+
+([KB_728824_Class56] of  Operative_system
+
+	(name "Windows Phone")
+	(version 8.1))
+
+([KB_728824_Class57] of  Operative_system
+
+	(name "iOS")
+	(version 10.0))
+
+([KB_728824_Class58] of  Operative_system
+
+	(name "Android")
+	(version 4.4))
+
+([KB_728824_Class59] of  Developer
+
+	(name "Pere Manel Verdugo Zamora"))
+
+([KB_728824_Class60] of  App Informatic Book
+
+	(developer [KB_728824_Class59])
+	(download 574228)
+	(name "iCloud Beta")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 6.5)
+	(score 4.0)
+	(type Informatic)
+	(developer [KB_728824_Class59])
+	(download 574228)
+	(name "iCloud Beta")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 6.5)
+	(score 4.0)
+	(type Informatic)
+	(developer [KB_728824_Class59])
+	(download 574228)
+	(name "iCloud Beta")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 6.5)
+	(score 4.0)
+	(type Informatic))
+
+([KB_728824_Class61] of  Developer
+
+	(name "Carlos Burges Ruiz de Gopegui"))
+
+([KB_728824_Class62] of  App Informatic Book
+
+	(developer [KB_728824_Class61])
+	(download 4253387)
+	(name "Automator para OS X")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 5.0)
+	(score 4.0)
+	(type Informatic)
+	(developer [KB_728824_Class61])
+	(download 4253387)
+	(name "Automator para OS X")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 5.0)
+	(score 4.0)
+	(type Informatic)
+	(developer [KB_728824_Class61])
+	(download 4253387)
+	(name "Automator para OS X")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 5.0)
+	(score 4.0)
+	(type Informatic))
+
+([KB_728824_Class63] of  Developer
+
+	(name "John Stevens Cabot Abbott"))
+
+([KB_728824_Class64] of  App Biography Book
+
+	(developer [KB_728824_Class63])
+	(download 4569)
+	(name "Benjamin Franklin")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 3.0)
+	(type Biography)
+	(developer [KB_728824_Class63])
+	(download 4569)
+	(name "Benjamin Franklin")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 3.0)
+	(type Biography)
+	(developer [KB_728824_Class63])
+	(download 4569)
+	(name "Benjamin Franklin")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 3.0)
+	(type Biography))
+
+([KB_728824_Class65] of  Developer
+
+	(name "Zoltán Géczi"))
+
+([KB_728824_Class66] of  App Biography Book
+
+	(developer [KB_728824_Class65])
+	(download 465994)
+	(name "Steve Jobs")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Biography)
+	(developer [KB_728824_Class65])
+	(download 465994)
+	(name "Steve Jobs")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Biography)
+	(developer [KB_728824_Class65])
+	(download 465994)
+	(name "Steve Jobs")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Biography))
+
+([KB_728824_Class67] of  Developer
+
+	(name "Brandon Boyd"))
+
+([KB_728824_Class68] of  App Art Book
+
+	(developer [KB_728824_Class67])
+	(download 45)
+	(name "So the Echo")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 45.9)
+	(score 4.5)
+	(type Art)
+	(developer [KB_728824_Class67])
+	(download 45)
+	(name "So the Echo")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 45.9)
+	(score 4.5)
+	(type Art)
+	(developer [KB_728824_Class67])
+	(download 45)
+	(name "So the Echo")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 45.9)
+	(score 4.5)
+	(type Art))
+
+([KB_728824_Class69] of  Developer
+
+	(name "Simon Schama"))
+
+([KB_728824_Class70] of  App Art Book
+
+	(developer [KB_728824_Class69])
+	(download 8654)
+	(name "The Face of Britain")
+	(operative_system [KB_728824_Class55])
+	(pegi 4)
+	(price 4.0)
+	(score 3.0)
+	(type Art)
+	(developer [KB_728824_Class69])
+	(download 8654)
+	(name "The Face of Britain")
+	(operative_system [KB_728824_Class55])
+	(pegi 4)
+	(price 4.0)
+	(score 3.0)
+	(type Art)
+	(developer [KB_728824_Class69])
+	(download 8654)
+	(name "The Face of Britain")
+	(operative_system [KB_728824_Class55])
+	(pegi 4)
+	(price 4.0)
+	(score 3.0)
+	(type Art))
+
+([KB_728824_Class71] of  Developer
+
+	(name "Amazon"))
+
+([KB_728824_Class72] of  App Video
+
+	(developer [KB_728824_Class71])
+	(download 3265415)
+	(name "Twitch")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video)
+	(developer [KB_728824_Class71])
+	(download 3265415)
+	(name "Twitch")
+	(operative_system [KB_728824_Class54])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video))
+
+([KB_728824_Class73] of  Developer
+
+	(name "You Tube"))
+
+([KB_728824_Class74] of  App Video
+
+	(developer [KB_728824_Class73])
+	(download 789542)
+	(name "You Tube")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video)
+	(developer [KB_728824_Class73])
+	(download 789542)
+	(name "You Tube")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video))
+
+([KB_728824_Class75] of  Developer
+
+	(name "IBERIA"))
+
+([KB_728824_Class76] of  App Travel
+
+	(developer [KB_728824_Class75])
+	(download 459865)
+	(name "Iberia")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 0.0)
+	(score 1.5)
+	(type Travel)
+	(developer [KB_728824_Class75])
+	(download 459865)
+	(name "Iberia")
+	(operative_system [KB_728824_Class57])
+	(pegi 4)
+	(price 0.0)
+	(score 1.5)
+	(type Travel))
+
+([KB_728824_Class77] of  Developer
+
+	(name "Google"))
+
+([KB_728824_Class78] of  App Travel
+
+	(developer [KB_728824_Class77])
+	(download 65491327)
+	(name "Google Earth")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Travel)
+	(developer [KB_728824_Class77])
+	(download 65491327)
+	(name "Google Earth")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Travel))
+
+([KB_728824_Class79] of  Developer
+
+	(name "Linkedln"))
+
+([KB_728824_Class80] of  App Social_network
+
+	(developer [KB_728824_Class79])
+	(download 326594)
+	(name "Linkedln")
+	(operative_system [KB_728824_Class55])
+	(pegi 9)
+	(price 0.0)
+	(score 4.3)
+	(type Social_network)
+	(developer [KB_728824_Class79])
+	(download 326594)
+	(name "Linkedln")
+	(operative_system [KB_728824_Class55])
+	(pegi 9)
+	(price 0.0)
+	(score 4.3)
+	(type Social_network))
+
+([KB_728824_Class81] of  Developer
+
+	(name "Twitter"))
+
+([KB_728824_Class82] of  App Social_network
+
+	(developer [KB_728824_Class81])
+	(download 9521784)
+	(name "Twitter")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.4)
+	(type Social_network)
+	(developer [KB_728824_Class81])
+	(download 9521784)
+	(name "Twitter")
+	(operative_system [KB_728824_Class58])
+	(pegi 9)
+	(price 0.0)
+	(score 4.4)
+	(type Social_network))
+
+([KB_728824_Class83] of  Developer
+
+	(name "Facebook"))
+
+([KB_728824_Class84] of  App Social_network
+
+	(developer [KB_728824_Class83])
+	(download 2165451)
+	(name "Facebook")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Social_network)
+	(developer [KB_728824_Class83])
+	(download 2165451)
+	(name "Facebook")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Social_network))
+
+([KB_728824_Class85] of  Developer
+
+	(name "Rihanna"))
+
+([KB_728824_Class86] of  App Electronic Music
+
+	(developer [KB_728824_Class85])
+	(download 123654884)
+	(name "Loud")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 1.7)
+	(score 5.0)
+	(type Electronic)
+	(developer [KB_728824_Class85])
+	(download 123654884)
+	(name "Loud")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 1.7)
+	(score 5.0)
+	(type Electronic)
+	(developer [KB_728824_Class85])
+	(download 123654884)
+	(name "Loud")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 1.7)
+	(score 5.0)
+	(type Electronic))
+
+([KB_728824_Class87] of  Developer
+
+	(name "Smash Mouth"))
+
+([KB_728824_Class88] of  App Rock Music
+
+	(developer [KB_728824_Class87])
+	(download 496258)
+	(name "All Stars")
+	(operative_system [KB_728824_Class56])
+	(pegi 4)
+	(price 5.2)
+	(score 5.0)
+	(type Rock)
+	(developer [KB_728824_Class87])
+	(download 496258)
+	(name "All Stars")
+	(operative_system [KB_728824_Class56])
+	(pegi 4)
+	(price 5.2)
+	(score 5.0)
+	(type Rock)
+	(developer [KB_728824_Class87])
+	(download 496258)
+	(name "All Stars")
+	(operative_system [KB_728824_Class56])
+	(pegi 4)
+	(price 5.2)
+	(score 5.0)
+	(type Rock))
+
+([KB_728824_Class89] of  Developer
+
+	(name "PSY"))
+
+([KB_728824_Class90] of  App Pop Music
+
+	(developer [KB_728824_Class89])
+	(download 169487562)
+	(name "Gangnam Style")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 1.2)
+	(score 3.0)
+	(type Pop)
+	(developer [KB_728824_Class89])
+	(download 169487562)
+	(name "Gangnam Style")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 1.2)
+	(score 3.0)
+	(type Pop)
+	(developer [KB_728824_Class89])
+	(download 169487562)
+	(name "Gangnam Style")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 1.2)
+	(score 3.0)
+	(type Pop))
+
+([KB_728824_Class91] of  Developer
+
+	(name "AppDreamTeam"))
+
+([KB_728824_Class92] of  App Music
+
+	(developer [KB_728824_Class91])
+	(download 453)
+	(name "iMusic ")
+	(operative_system [KB_728824_Class55])
+	(pegi 4)
+	(price 0.0)
+	(score 2.0)
+	(type Music)
+	(developer [KB_728824_Class91])
+	(download 453)
+	(name "iMusic ")
+	(operative_system [KB_728824_Class55])
+	(pegi 4)
+	(price 0.0)
+	(score 2.0)
+	(type Music))
+
+([KB_728824_Class93] of  Developer
+
+	(name "Spotify Ltd"))
+
+([KB_728824_Class94] of  App Music
+
+	(developer [KB_728824_Class93])
+	(download 12648)
+	(name "Spotify Music")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Music)
+	(developer [KB_728824_Class93])
+	(download 12648)
+	(name "Spotify Music")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Music))
+
+([KB_728824_Class95] of  Developer
+
+	(name "Gameloft"))
+
+([KB_728824_Class96] of  App Cards Game
+
+	(developer [KB_728824_Class95])
+	(download 4916)
+	(name "UNO & Friends")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 1.0)
+	(score 4.0)
+	(type Cards)
+	(developer [KB_728824_Class95])
+	(download 4916)
+	(name "UNO & Friends")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 1.0)
+	(score 4.0)
+	(type Cards)
+	(developer [KB_728824_Class95])
+	(download 4916)
+	(name "UNO & Friends")
+	(operative_system [KB_728824_Class57])
+	(pegi 9)
+	(price 1.0)
+	(score 4.0)
+	(type Cards))
+
+([KB_728824_Class97] of  Developer
+
+	(name "Ketchapp"))
+
+([KB_728824_Class98] of  App TableGame Game
+
+	(developer [KB_728824_Class97])
+	(download 4643)
+	(name "2048")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [KB_728824_Class97])
+	(download 4643)
+	(name "2048")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [KB_728824_Class97])
+	(download 4643)
+	(name "2048")
+	(operative_system [KB_728824_Class58])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame))
+
+([KB_728824_Class99] of  Developer
+
+	(name "Etermax"))

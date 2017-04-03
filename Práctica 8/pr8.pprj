@@ -1,4 +1,4 @@
-; Fri Mar 31 14:26:39 CEST 2017
+; Mon Apr 03 21:15:53 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,15 +20,15 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[pr8_ProjectKB_Class85]
-		[pr8_ProjectKB_Class86]
-		[pr8_ProjectKB_Class87]
-		[pr8_ProjectKB_Class88]
-		[pr8_ProjectKB_Class89]
-		[pr8_ProjectKB_Class90]
-		[pr8_ProjectKB_Class91]
-		[pr8_ProjectKB_Class92]
-		[pr8_ProjectKB_Class93]))
+		[pr8_ProjectKB_Class221]
+		[pr8_ProjectKB_Class222]
+		[pr8_ProjectKB_Class223]
+		[pr8_ProjectKB_Class224]
+		[pr8_ProjectKB_Class225]
+		[pr8_ProjectKB_Class226]
+		[pr8_ProjectKB_Class227]
+		[pr8_ProjectKB_Class228]
+		[pr8_ProjectKB_Class229]))
 
 ([CLSES_TAB] of  Widget
 
@@ -72,6 +72,9 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
+([KB_291527_Class3] of  Map
+)
+
 ([KB_510583_Class0] of  String
 
 	(name "factory_class_name")
@@ -80,9 +83,9 @@
 ([KB_510583_Class1] of  Map
 
 	(entries
-		[pr8_ProjectKB_Class94]
-		[pr8_ProjectKB_Class95]
-		[pr8_ProjectKB_Class96]))
+		[pr8_ProjectKB_Class230]
+		[pr8_ProjectKB_Class231]
+		[pr8_ProjectKB_Class232]))
 
 ([KB_510583_Class10] of  Property_List
 )
@@ -1101,9 +1104,6 @@
 	(property_list [KB_510583_Class106])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
 
-([KB_654867_Class3] of  Map
-)
-
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -1183,75 +1183,221 @@
 	(x 0)
 	(y 60))
 
-([pr8_ProjectKB_Class384] of  String
+([pr8_ProjectKB_Class133] of  Widget
 
-	(name "SearchTab_Query"))
+	(is_hidden FALSE)
+	(name "User")
+	(property_list [pr8_ProjectKB_Class134])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
 
-([pr8_ProjectKB_Class85] of  String
+([pr8_ProjectKB_Class134] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class135]
+		[pr8_ProjectKB_Class136]
+		[pr8_ProjectKB_Class140]
+		[pr8_ProjectKB_Class144]
+		[pr8_ProjectKB_Class146]
+		[pr8_ProjectKB_Class148]
+		[pr8_ProjectKB_Class150]))
+
+([pr8_ProjectKB_Class135] of  Property_List
+
+	(name "layout properties"))
+
+([pr8_ProjectKB_Class136] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "recom")
+	(property_list [pr8_ProjectKB_Class137])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 310))
+
+([pr8_ProjectKB_Class137] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class138]
+		[pr8_ProjectKB_Class139]))
+
+([pr8_ProjectKB_Class138] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([pr8_ProjectKB_Class139] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([pr8_ProjectKB_Class140] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "device")
+	(property_list [pr8_ProjectKB_Class141])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([pr8_ProjectKB_Class141] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class142]
+		[pr8_ProjectKB_Class143]))
+
+([pr8_ProjectKB_Class142] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([pr8_ProjectKB_Class143] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([pr8_ProjectKB_Class144] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "pleasure")
+	(property_list [pr8_ProjectKB_Class145])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([pr8_ProjectKB_Class145] of  Property_List
+)
+
+([pr8_ProjectKB_Class146] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "name")
+	(property_list [pr8_ProjectKB_Class147])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([pr8_ProjectKB_Class147] of  Property_List
+)
+
+([pr8_ProjectKB_Class148] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "language")
+	(property_list [pr8_ProjectKB_Class149])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 100)
+	(y 60))
+
+([pr8_ProjectKB_Class149] of  Property_List
+)
+
+([pr8_ProjectKB_Class150] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "age")
+	(property_list [pr8_ProjectKB_Class151])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 60))
+
+([pr8_ProjectKB_Class151] of  Property_List
+)
+
+([pr8_ProjectKB_Class221] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([pr8_ProjectKB_Class86] of  String
-
-	(name "Developer")
-	(string_value "name"))
-
-([pr8_ProjectKB_Class87] of  String
-
-	(name ":FUNCTION")
-	(string_value "%3ADEFINITION-NAME"))
-
-([pr8_ProjectKB_Class88] of  String
+([pr8_ProjectKB_Class222] of  String
 
 	(name ":RULE")
 	(string_value "%3ADEFINITION-NAME"))
 
-([pr8_ProjectKB_Class89] of  String
+([pr8_ProjectKB_Class223] of  String
 
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
+	(name ":FUNCTION")
+	(string_value "%3ADEFINITION-NAME"))
 
-([pr8_ProjectKB_Class90] of  String
+([pr8_ProjectKB_Class224] of  String
+
+	(name "Developer")
+	(string_value "name"))
+
+([pr8_ProjectKB_Class225] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([pr8_ProjectKB_Class91] of  String
+([pr8_ProjectKB_Class226] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([pr8_ProjectKB_Class227] of  String
 
 	(name "Operative_system")
 	(string_value "name"))
 
-([pr8_ProjectKB_Class92] of  String
+([pr8_ProjectKB_Class228] of  String
 
 	(name "App")
 	(string_value "name"))
 
-([pr8_ProjectKB_Class93] of  String
+([pr8_ProjectKB_Class229] of  String
 
 	(name ":JESS-DEFINITION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([pr8_ProjectKB_Class94] of  Map_Entry
+([pr8_ProjectKB_Class230] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([pr8_ProjectKB_Class95] of  Map_Entry
+([pr8_ProjectKB_Class231] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([pr8_ProjectKB_Class96] of  Map_Entry
+([pr8_ProjectKB_Class232] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
+
+([pr8_ProjectKB_Class384] of  String
+
+	(name "SearchTab_Query"))
+
+([pr8_ProjectKB_Class83] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "version")
+	(property_list [pr8_ProjectKB_Class84])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 60))
+
+([pr8_ProjectKB_Class84] of  Property_List
+)
 
 ([PROJECT] of  Project
 
@@ -1268,8 +1414,9 @@
 		[KB_510583_Class133]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[KB_510583_Class213]
+		[KB_510583_Class234]
 		[STANDARD_SLOT_FORM_WIDGET]
-		[KB_510583_Class234])
+		[pr8_ProjectKB_Class133])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
