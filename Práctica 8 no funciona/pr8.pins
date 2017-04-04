@@ -1,0 +1,895 @@
+; Tue Apr 04 14:09:40 CEST 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Jess+engine] of  %3AJESS-ENGINE
+)
+
+([pr8_Class265] of  Operative_system
+
+	(name "Symbian")
+	(version 8))
+
+([pr8_Class266] of  Operative_system
+
+	(name "Symbian")
+	(version 7))
+
+([pr8_Class267] of  Operative_system
+
+	(name "BlackBerry")
+	(version 7))
+
+([pr8_Class268] of  Operative_system
+
+	(name "BlackBerry")
+	(version 6))
+
+([pr8_Class269] of  Operative_system
+
+	(name "BlackBerry")
+	(version 5))
+
+([pr8_Class270] of  Operative_system
+
+	(name "Windows Phone")
+	(version 8))
+
+([pr8_Class271] of  Operative_system
+
+	(name "Windows Phone")
+	(version 7))
+
+([pr8_Class272] of  Operative_system
+
+	(name "iOS")
+	(version 10))
+
+([pr8_Class273] of  Operative_system
+
+	(name "iOS")
+	(version 9))
+
+([pr8_Class274] of  Operative_system
+
+	(name "iOS")
+	(version 8))
+
+([pr8_Class275] of  Operative_system
+
+	(name "Android")
+	(version 6))
+
+([pr8_Class276] of  Operative_system
+
+	(name "Android")
+	(version 5))
+
+([pr8_Class277] of  Operative_system
+
+	(name "Android")
+	(version 4))
+
+([pr8_Class278] of  Developer
+
+	(name "Pere Manel Verdugo Zamora"))
+
+([pr8_Class279] of  App Informatic Book
+
+	(developer [pr8_Class278])
+	(download 574228)
+	(name "iCloud Beta")
+	(operative_system [pr8_Class274])
+	(pegi 4)
+	(price 6.5)
+	(score 4.0)
+	(type Informatic)
+	(developer [pr8_Class278])
+	(download 574228)
+	(name "iCloud Beta")
+	(operative_system [pr8_Class274])
+	(pegi 4)
+	(price 6.5)
+	(score 4.0)
+	(type Informatic)
+	(developer [pr8_Class278])
+	(download 574228)
+	(name "iCloud Beta")
+	(operative_system [pr8_Class274])
+	(pegi 4)
+	(price 6.5)
+	(score 4.0)
+	(type Informatic))
+
+([pr8_Class280] of  Developer
+
+	(name "Carlos Burges Ruiz de Gopegui"))
+
+([pr8_Class281] of  App Informatic Book
+
+	(developer [pr8_Class280])
+	(download 4253387)
+	(name "Automator para OS X")
+	(operative_system [pr8_Class273])
+	(pegi 4)
+	(price 5.0)
+	(score 4.0)
+	(type Informatic)
+	(developer [pr8_Class280])
+	(download 4253387)
+	(name "Automator para OS X")
+	(operative_system [pr8_Class273])
+	(pegi 4)
+	(price 5.0)
+	(score 4.0)
+	(type Informatic)
+	(developer [pr8_Class280])
+	(download 4253387)
+	(name "Automator para OS X")
+	(operative_system [pr8_Class273])
+	(pegi 4)
+	(price 5.0)
+	(score 4.0)
+	(type Informatic))
+
+([pr8_Class282] of  Developer
+
+	(name "John Stevens Cabot Abbott"))
+
+([pr8_Class283] of  App Biography Book
+
+	(developer [pr8_Class282])
+	(download 4569)
+	(name "Benjamin Franklin")
+	(operative_system [pr8_Class277])
+	(pegi 4)
+	(price 0.0)
+	(score 3.0)
+	(type Biography)
+	(developer [pr8_Class282])
+	(download 4569)
+	(name "Benjamin Franklin")
+	(operative_system [pr8_Class277])
+	(pegi 4)
+	(price 0.0)
+	(score 3.0)
+	(type Biography)
+	(developer [pr8_Class282])
+	(download 4569)
+	(name "Benjamin Franklin")
+	(operative_system [pr8_Class277])
+	(pegi 4)
+	(price 0.0)
+	(score 3.0)
+	(type Biography))
+
+([pr8_Class284] of  Developer
+
+	(name "Zoltán Géczi"))
+
+([pr8_Class285] of  App Biography Book
+
+	(developer [pr8_Class284])
+	(download 465994)
+	(name "Steve Jobs")
+	(operative_system [pr8_Class273])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Biography)
+	(developer [pr8_Class284])
+	(download 465994)
+	(name "Steve Jobs")
+	(operative_system [pr8_Class273])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Biography)
+	(developer [pr8_Class284])
+	(download 465994)
+	(name "Steve Jobs")
+	(operative_system [pr8_Class273])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Biography))
+
+([pr8_Class286] of  Developer
+
+	(name "Brandon Boyd"))
+
+([pr8_Class287] of  App Art Book
+
+	(developer [pr8_Class286])
+	(download 45)
+	(name "So the Echo")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 45.9)
+	(score 4.5)
+	(type Art)
+	(developer [pr8_Class286])
+	(download 45)
+	(name "So the Echo")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 45.9)
+	(score 4.5)
+	(type Art)
+	(developer [pr8_Class286])
+	(download 45)
+	(name "So the Echo")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 45.9)
+	(score 4.5)
+	(type Art))
+
+([pr8_Class288] of  Developer
+
+	(name "Simon Schama"))
+
+([pr8_Class289] of  App Art Book
+
+	(developer [pr8_Class288])
+	(download 8654)
+	(name "The Face of Britain")
+	(operative_system [pr8_Class267])
+	(pegi 4)
+	(price 4.0)
+	(score 3.0)
+	(type Art)
+	(developer [pr8_Class288])
+	(download 8654)
+	(name "The Face of Britain")
+	(operative_system [pr8_Class267])
+	(pegi 4)
+	(price 4.0)
+	(score 3.0)
+	(type Art)
+	(developer [pr8_Class288])
+	(download 8654)
+	(name "The Face of Britain")
+	(operative_system [pr8_Class267])
+	(pegi 4)
+	(price 4.0)
+	(score 3.0)
+	(type Art))
+
+([pr8_Class290] of  Developer
+
+	(name "Amazon"))
+
+([pr8_Class291] of  App Video
+
+	(developer [pr8_Class290])
+	(download 3265415)
+	(name "Twitch")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video)
+	(developer [pr8_Class290])
+	(download 3265415)
+	(name "Twitch")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video))
+
+([pr8_Class292] of  Developer
+
+	(name "You Tube"))
+
+([pr8_Class293] of  App Video
+
+	(developer [pr8_Class292])
+	(download 789542)
+	(name "You Tube")
+	(operative_system [pr8_Class274])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video)
+	(developer [pr8_Class292])
+	(download 789542)
+	(name "You Tube")
+	(operative_system [pr8_Class274])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Video))
+
+([pr8_Class294] of  Developer
+
+	(name "IBERIA"))
+
+([pr8_Class295] of  App Travel
+
+	(developer [pr8_Class294])
+	(download 459865)
+	(name "Iberia")
+	(operative_system [pr8_Class274])
+	(pegi 4)
+	(price 0.0)
+	(score 1.5)
+	(type Travel)
+	(developer [pr8_Class294])
+	(download 459865)
+	(name "Iberia")
+	(operative_system [pr8_Class274])
+	(pegi 4)
+	(price 0.0)
+	(score 1.5)
+	(type Travel))
+
+([pr8_Class296] of  Developer
+
+	(name "Google"))
+
+([pr8_Class297] of  App Travel
+
+	(developer [pr8_Class296])
+	(download 65491327)
+	(name "Google Earth")
+	(operative_system [pr8_Class276])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Travel)
+	(developer [pr8_Class296])
+	(download 65491327)
+	(name "Google Earth")
+	(operative_system [pr8_Class276])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Travel))
+
+([pr8_Class298] of  Developer
+
+	(name "Linkedln"))
+
+([pr8_Class299] of  App Social_network
+
+	(developer [pr8_Class298])
+	(download 326594)
+	(name "Linkedln")
+	(operative_system [pr8_Class269])
+	(pegi 9)
+	(price 0.0)
+	(score 4.3)
+	(type Social_network)
+	(developer [pr8_Class298])
+	(download 326594)
+	(name "Linkedln")
+	(operative_system [pr8_Class269])
+	(pegi 9)
+	(price 0.0)
+	(score 4.3)
+	(type Social_network))
+
+([pr8_Class300] of  Developer
+
+	(name "Twitter"))
+
+([pr8_Class301] of  App Social_network
+
+	(developer [pr8_Class300])
+	(download 9521784)
+	(name "Twitter")
+	(operative_system [pr8_Class275])
+	(pegi 9)
+	(price 0.0)
+	(score 4.4)
+	(type Social_network)
+	(developer [pr8_Class300])
+	(download 9521784)
+	(name "Twitter")
+	(operative_system [pr8_Class275])
+	(pegi 9)
+	(price 0.0)
+	(score 4.4)
+	(type Social_network))
+
+([pr8_Class302] of  Developer
+
+	(name "Facebook"))
+
+([pr8_Class303] of  App Social_network
+
+	(developer [pr8_Class302])
+	(download 2165451)
+	(name "Facebook")
+	(operative_system [pr8_Class272])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Social_network)
+	(developer [pr8_Class302])
+	(download 2165451)
+	(name "Facebook")
+	(operative_system [pr8_Class272])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Social_network))
+
+([pr8_Class304] of  Developer
+
+	(name "Rihanna"))
+
+([pr8_Class305] of  App Electronic Music
+
+	(developer [pr8_Class304])
+	(download 123654884)
+	(name "Loud")
+	(operative_system [pr8_Class277])
+	(pegi 4)
+	(price 1.7)
+	(score 5.0)
+	(type Electronic)
+	(developer [pr8_Class304])
+	(download 123654884)
+	(name "Loud")
+	(operative_system [pr8_Class277])
+	(pegi 4)
+	(price 1.7)
+	(score 5.0)
+	(type Electronic)
+	(developer [pr8_Class304])
+	(download 123654884)
+	(name "Loud")
+	(operative_system [pr8_Class277])
+	(pegi 4)
+	(price 1.7)
+	(score 5.0)
+	(type Electronic))
+
+([pr8_Class306] of  Developer
+
+	(name "Smash Mouth"))
+
+([pr8_Class307] of  App Rock Music
+
+	(developer [pr8_Class306])
+	(download 496258)
+	(name "All Stars")
+	(operative_system [pr8_Class271])
+	(pegi 4)
+	(price 5.2)
+	(score 5.0)
+	(type Rock)
+	(developer [pr8_Class306])
+	(download 496258)
+	(name "All Stars")
+	(operative_system [pr8_Class271])
+	(pegi 4)
+	(price 5.2)
+	(score 5.0)
+	(type Rock)
+	(developer [pr8_Class306])
+	(download 496258)
+	(name "All Stars")
+	(operative_system [pr8_Class271])
+	(pegi 4)
+	(price 5.2)
+	(score 5.0)
+	(type Rock))
+
+([pr8_Class308] of  Developer
+
+	(name "PSY"))
+
+([pr8_Class309] of  App Pop Music
+
+	(developer [pr8_Class308])
+	(download 169487562)
+	(name "Gangnam Style")
+	(operative_system [pr8_Class273])
+	(pegi 9)
+	(price 1.2)
+	(score 3.0)
+	(type Pop)
+	(developer [pr8_Class308])
+	(download 169487562)
+	(name "Gangnam Style")
+	(operative_system [pr8_Class273])
+	(pegi 9)
+	(price 1.2)
+	(score 3.0)
+	(type Pop)
+	(developer [pr8_Class308])
+	(download 169487562)
+	(name "Gangnam Style")
+	(operative_system [pr8_Class273])
+	(pegi 9)
+	(price 1.2)
+	(score 3.0)
+	(type Pop))
+
+([pr8_Class310] of  Developer
+
+	(name "AppDreamTeam"))
+
+([pr8_Class311] of  App Music
+
+	(developer [pr8_Class310])
+	(download 453)
+	(name "iMusic ")
+	(operative_system [pr8_Class269])
+	(pegi 4)
+	(price 0.0)
+	(score 2.0)
+	(type Music)
+	(developer [pr8_Class310])
+	(download 453)
+	(name "iMusic ")
+	(operative_system [pr8_Class269])
+	(pegi 4)
+	(price 0.0)
+	(score 2.0)
+	(type Music))
+
+([pr8_Class312] of  Developer
+
+	(name "Spotify Ltd"))
+
+([pr8_Class313] of  App Music
+
+	(developer [pr8_Class312])
+	(download 12648)
+	(name "Spotify Music")
+	(operative_system [pr8_Class276])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Music)
+	(developer [pr8_Class312])
+	(download 12648)
+	(name "Spotify Music")
+	(operative_system [pr8_Class276])
+	(pegi 4)
+	(price 0.0)
+	(score 5.0)
+	(type Music))
+
+([pr8_Class314] of  Developer
+
+	(name "Gameloft"))
+
+([pr8_Class315] of  App Cards Game
+
+	(developer [pr8_Class314])
+	(download 4916)
+	(name "UNO & Friends")
+	(operative_system [pr8_Class273])
+	(pegi 9)
+	(price 1.0)
+	(score 4.0)
+	(type Cards)
+	(developer [pr8_Class314])
+	(download 4916)
+	(name "UNO & Friends")
+	(operative_system [pr8_Class273])
+	(pegi 9)
+	(price 1.0)
+	(score 4.0)
+	(type Cards)
+	(developer [pr8_Class314])
+	(download 4916)
+	(name "UNO & Friends")
+	(operative_system [pr8_Class273])
+	(pegi 9)
+	(price 1.0)
+	(score 4.0)
+	(type Cards))
+
+([pr8_Class316] of  Developer
+
+	(name "Ketchapp"))
+
+([pr8_Class317] of  App TableGame Game
+
+	(developer [pr8_Class316])
+	(download 4643)
+	(name "2048")
+	(operative_system [pr8_Class275])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [pr8_Class316])
+	(download 4643)
+	(name "2048")
+	(operative_system [pr8_Class275])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [pr8_Class316])
+	(download 4643)
+	(name "2048")
+	(operative_system [pr8_Class275])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame))
+
+([pr8_Class318] of  Developer
+
+	(name "Etermax"))
+
+([pr8_Class319] of  App TableGame Game
+
+	(developer [pr8_Class318])
+	(download 86187)
+	(name "Apalabrados")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [pr8_Class318])
+	(download 86187)
+	(name "Apalabrados")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame)
+	(developer [pr8_Class318])
+	(download 86187)
+	(name "Apalabrados")
+	(operative_system [pr8_Class265])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type TableGame))
+
+([pr8_Class320] of  Developer
+
+	(name "Warner Bros"))
+
+([pr8_Class321] of  App Arcade Game
+
+	(developer [pr8_Class320])
+	(download 593)
+	(name "Batman: Arkham Origins")
+	(operative_system [pr8_Class276])
+	(pegi 9)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [pr8_Class320])
+	(download 593)
+	(name "Batman: Arkham Origins")
+	(operative_system [pr8_Class276])
+	(pegi 9)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [pr8_Class320])
+	(download 593)
+	(name "Batman: Arkham Origins")
+	(operative_system [pr8_Class276])
+	(pegi 9)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade))
+
+([pr8_Class322] of  App Cards Game
+
+	(developer [pr8_Class320])
+	(download 457897)
+	(name "MORTAL KOMBAT X")
+	(operative_system [pr8_Class272])
+	(pegi 18)
+	(price 15.0)
+	(score 1.5)
+	(type Cards)
+	(developer [pr8_Class320])
+	(download 457897)
+	(name "MORTAL KOMBAT X")
+	(operative_system [pr8_Class272])
+	(pegi 18)
+	(price 15.0)
+	(score 1.5)
+	(type Cards)
+	(developer [pr8_Class320])
+	(download 457897)
+	(name "MORTAL KOMBAT X")
+	(operative_system [pr8_Class272])
+	(pegi 18)
+	(price 15.0)
+	(score 1.5)
+	(type Cards))
+
+([pr8_Class323] of  Developer
+
+	(name "King"))
+
+([pr8_Class324] of  App Arcade Game
+
+	(developer [pr8_Class323])
+	(download 63887)
+	(name "Candy Crush Saga")
+	(operative_system [pr8_Class266])
+	(pegi 4)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [pr8_Class323])
+	(download 63887)
+	(name "Candy Crush Saga")
+	(operative_system [pr8_Class266])
+	(pegi 4)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade)
+	(developer [pr8_Class323])
+	(download 63887)
+	(name "Candy Crush Saga")
+	(operative_system [pr8_Class266])
+	(pegi 4)
+	(price 0.0)
+	(score 4.0)
+	(type Arcade))
+
+([pr8_Class325] of  Developer
+
+	(name "Mojang AB"))
+
+([pr8_Class326] of  App Adventure Game
+
+	(developer [pr8_Class325])
+	(download 6835)
+	(name "Minecraft: Pocket Edition")
+	(operative_system [pr8_Class267])
+	(pegi 9)
+	(price 6.99)
+	(score 4.0)
+	(type Adventure)
+	(developer [pr8_Class325])
+	(download 6835)
+	(name "Minecraft: Pocket Edition")
+	(operative_system [pr8_Class267])
+	(pegi 9)
+	(price 6.99)
+	(score 4.0)
+	(type Adventure)
+	(developer [pr8_Class325])
+	(download 6835)
+	(name "Minecraft: Pocket Edition")
+	(operative_system [pr8_Class267])
+	(pegi 9)
+	(price 6.99)
+	(score 4.0)
+	(type Adventure))
+
+([pr8_Class327] of  Developer
+
+	(name "Electronic Arts "))
+
+([pr8_Class328] of  App Adventure Game
+
+	(developer [pr8_Class327])
+	(download 19141)
+	(name "Plants vs. Zombies 2")
+	(operative_system [pr8_Class277])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Adventure)
+	(developer [pr8_Class327])
+	(download 19141)
+	(name "Plants vs. Zombies 2")
+	(operative_system [pr8_Class277])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Adventure)
+	(developer [pr8_Class327])
+	(download 19141)
+	(name "Plants vs. Zombies 2")
+	(operative_system [pr8_Class277])
+	(pegi 9)
+	(price 0.0)
+	(score 4.8)
+	(type Adventure))
+
+([pr8_Class329] of  Developer
+
+	(name "Halfbrick Studios"))
+
+([pr8_Class330] of  App Action Game
+
+	(developer [pr8_Class329])
+	(download 9342)
+	(name "Fruit Ninja")
+	(operative_system [pr8_Class270])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [pr8_Class329])
+	(download 9342)
+	(name "Fruit Ninja")
+	(operative_system [pr8_Class270])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [pr8_Class329])
+	(download 9342)
+	(name "Fruit Ninja")
+	(operative_system [pr8_Class270])
+	(pegi 4)
+	(price 0.0)
+	(score 4.5)
+	(type Action))
+
+([pr8_Class331] of  Developer
+
+	(name "Nintendo"))
+
+([pr8_Class332] of  App Action Game
+
+	(developer [pr8_Class331])
+	(download 7164)
+	(name "Super Mario Run")
+	(operative_system [pr8_Class274])
+	(pegi 10)
+	(price 9.99)
+	(score 2.0)
+	(type Action)
+	(developer [pr8_Class331])
+	(download 7164)
+	(name "Super Mario Run")
+	(operative_system [pr8_Class274])
+	(pegi 10)
+	(price 9.99)
+	(score 2.0)
+	(type Action)
+	(developer [pr8_Class331])
+	(download 7164)
+	(name "Super Mario Run")
+	(operative_system [pr8_Class274])
+	(pegi 10)
+	(price 9.99)
+	(score 2.0)
+	(type Action))
+
+([pr8_Class333] of  Developer
+
+	(name "Supercell"))
+
+([pr8_Class334] of  App Action Game
+
+	(developer [pr8_Class333])
+	(download 33688)
+	(name "Clash Royale")
+	(operative_system [pr8_Class277])
+	(pegi 9)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [pr8_Class333])
+	(download 33688)
+	(name "Clash Royale")
+	(operative_system [pr8_Class277])
+	(pegi 9)
+	(price 0.0)
+	(score 4.5)
+	(type Action)
+	(developer [pr8_Class333])
+	(download 33688)
+	(name "Clash Royale")
+	(operative_system [pr8_Class277])
+	(pegi 9)
+	(price 0.0)
+	(score 4.5)
+	(type Action))
