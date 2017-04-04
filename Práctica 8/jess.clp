@@ -80,9 +80,9 @@
 
 (deffacts initial-app "Initial apps in the system"
 	(Jess_app (name "Clash Royale") (developer "Supercell") (download 33688) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.5) (type Action))
-	(Jess_app (name "Super Mario Run") (developer "Nintendo") (download 7164) (operative_system "iOS") (version 8) (pegi 10) (price 9.99) (score 2.0) (type Action))
-	(Jess_app (name "Fruit Ninja") (developer "Halfbrick Studios") (download 9342) (operative_system "Windows Phone") (version 8) (pegi 4) (price 0.0) (score 4.5) (type Action))
-	(Jess_app (name "Plants vs. Zombies 2") (developer "Electronic Arts ") (download 19141) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.8) (type Adventure))
+	(Jess_app (name "Super Mario Run") (developer "Supercell") (download 7164) (operative_system "iOS") (version 8) (pegi 10) (price 9.99) (score 2.0) (type Action))
+	(Jess_app (name "Fruit Ninja") (developer "Supercell") (download 9342) (operative_system "Windows Phone") (version 8) (pegi 4) (price 0.0) (score 4.5) (type Action))
+	(Jess_app (name "Plants vs. Zombies 2") (developer "Supercell") (download 19141) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.8) (type Adventure))
 	(Jess_app (name "Minecraft: Pocket Edition") (developer "Mojang AB") (download 6835 ) (operative_system "BlackBerry") (version 7) (pegi 9) (price 6.99) (score 4.0) (type Adventure))
 	(Jess_app (name "Candy Crush Saga") (developer "King") (download 63887 ) (operative_system "Symbian") (version 7) (pegi 4) (price 0.0) (score 4.0) (type Arcade))
 	(Jess_app (name "Batman: Arkham Origins") (developer "Warner Bros") (download 593 ) (operative_system "Android") (version 5) (pegi 9) (price 0.0) (score 4.0) (type Arcade))
@@ -110,22 +110,23 @@
 	(Jess_app (name "Automator para OS X") (developer "Carlos Burges Ruiz de Gopegui") (download 4253387) (operative_system "iOS") (version 9) (pegi 4) (price 5.0) (score 4.0) (type Informatic))
 	(Jess_app (name "iCloud Beta") (developer "Pere Manel Verdugo Zamora") (download 574228) (operative_system "iOS") (version 8) (pegi 4) (price 6.5) (score 4.0) (type Informatic)))
 
-(defrule check-operative_system "Check if OS exits in the system, if not it creates it"
-	(Jess_app  (operative_system ?os_name) (version ?os_version))
-	(object (is-a :STANDARD-CLASS) (:NAME "Operative_system") (:DIRECT-INSTANCES $?list))
-	(object (is-a Operative_system) (name ?os_name) (version ?os_version) (OBJECT ?OS))
-	(test (not (member ?OS ?list)))
-	=>
-	(make-instance of Operative_system (name ?os_name) (version ?os_version)))
-	
+(mapclass :THING)
 (defrule load-app "Creates instances from the app template Jess in Protégé"
-	(Jess_app (name ?name) (download ?download) (pegi ?pegi) (type ?type) (price ?price) (score ?score) (developer ?dev) (operative_system ?os) (version ?version))
-	?h1 <- (object (is-a Developer) (name ?dev))
+	(Jess_app (name ?name) (download ?download) (pegi ?pegi) (type ?type) (price ?price) (score ?score)(operative_system ?os) (version ?version))
 	?h2 <- (object (is-a Operative_system) (name ?os) (version ?version))
 	=>
-	(make-instance of App (name ?name) (developer ?h1)(download ?download) (operative_system ?h2)(pegi ?pegi) (price ?price) (score ?score) (type ?type)))
-
-(mapclass :THING)
+	(make-instance of App (name ?name)(download ?download) (operative_system ?h2)(pegi ?pegi) (price ?price) (score ?score) (type ?type)))
+	
+(defrule l
+	(Jess_app (name ?name) (developer ?dev))
+	(object (is-a Developer) (OBJECT ?DEV) (name ?dev) (develops $?develops))
+	(object (is-a App) (name ?name) (developer ?appDev) (OBJECT ?APP))
+	(test(not(member$ ?APP ?develops)))
+	=>
+	(slot-set ?APP developer ?DEV)
+	(slot-insert$ ?developer develops 1 ?APP)
+	)	
+	
 (mapclass Game)
 
 (defrule MAIN::set-game-instance "Set app instances as direct instances for class Game"

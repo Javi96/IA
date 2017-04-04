@@ -1,4 +1,4 @@
-; Tue Apr 04 13:30:13 CEST 2017
+; Wed Apr 05 01:39:56 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -34,6 +34,10 @@
 		(range 0.0 500.0)
 		(default 10.0)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot develops
+		(type INSTANCE)
+;+		(allowed-classes App)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION-NAME
 		(type STRING)
@@ -310,6 +314,10 @@
 	(single-slot name_
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot develops
+		(type INSTANCE)
+;+		(allowed-classes App)
 		(create-accessor read-write)))
 
 (defclass Operative_system
