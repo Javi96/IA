@@ -1,4 +1,4 @@
-; Mon Apr 03 21:15:53 CEST 2017
+; Tue Apr 04 13:30:13 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,15 +20,16 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[pr8_ProjectKB_Class221]
-		[pr8_ProjectKB_Class222]
-		[pr8_ProjectKB_Class223]
-		[pr8_ProjectKB_Class224]
-		[pr8_ProjectKB_Class225]
-		[pr8_ProjectKB_Class226]
-		[pr8_ProjectKB_Class227]
-		[pr8_ProjectKB_Class228]
-		[pr8_ProjectKB_Class229]))
+		[pr8_ProjectKB_Class10431]
+		[pr8_ProjectKB_Class10432]
+		[pr8_ProjectKB_Class10433]
+		[pr8_ProjectKB_Class10434]
+		[pr8_ProjectKB_Class10435]
+		[pr8_ProjectKB_Class10436]
+		[pr8_ProjectKB_Class10437]
+		[pr8_ProjectKB_Class10438]
+		[pr8_ProjectKB_Class10439]
+		[pr8_ProjectKB_Class10440]))
 
 ([CLSES_TAB] of  Widget
 
@@ -72,7 +73,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_291527_Class3] of  Map
+([KB_381162_Class3] of  Map
 )
 
 ([KB_510583_Class0] of  String
@@ -83,9 +84,9 @@
 ([KB_510583_Class1] of  Map
 
 	(entries
-		[pr8_ProjectKB_Class230]
-		[pr8_ProjectKB_Class231]
-		[pr8_ProjectKB_Class232]))
+		[pr8_ProjectKB_Class10441]
+		[pr8_ProjectKB_Class10442]
+		[pr8_ProjectKB_Class10443]))
 
 ([KB_510583_Class10] of  Property_List
 )
@@ -1183,6 +1184,487 @@
 	(x 0)
 	(y 60))
 
+([pr8_ProjectKB_Class10] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([pr8_ProjectKB_Class10263] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Wallet")
+	(name "wallet")
+	(property_list [pr8_ProjectKB_Class10264])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 300))
+
+([pr8_ProjectKB_Class10264] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class10357]
+		[pr8_ProjectKB_Class10358]))
+
+([pr8_ProjectKB_Class10357] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10358] of  Boolean
+
+	(boolean_value FALSE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10359] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10360] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Value"))
+
+([pr8_ProjectKB_Class10361] of  String
+
+	(name "ButtonDescription-View Value"))
+
+([pr8_ProjectKB_Class10362] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add Value"))
+
+([pr8_ProjectKB_Class10363] of  String
+
+	(name "ButtonDescription-Add Value"))
+
+([pr8_ProjectKB_Class10364] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove Value"))
+
+([pr8_ProjectKB_Class10365] of  String
+
+	(name "ButtonDescription-Remove Value"))
+
+([pr8_ProjectKB_Class10366] of  Boolean
+
+	(boolean_value FALSE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10367] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10368] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([pr8_ProjectKB_Class10369] of  String
+
+	(name "ButtonDescription-View Instance"))
+
+([pr8_ProjectKB_Class10370] of  String
+
+	(name "ButtonDescription-View References to Value"))
+
+([pr8_ProjectKB_Class10371] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([pr8_ProjectKB_Class10372] of  String
+
+	(name "ButtonDescription-Create Instance"))
+
+([pr8_ProjectKB_Class10373] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add Instance"))
+
+([pr8_ProjectKB_Class10374] of  String
+
+	(name "ButtonDescription-Add Instance"))
+
+([pr8_ProjectKB_Class10375] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove Instance"))
+
+([pr8_ProjectKB_Class10376] of  String
+
+	(name "ButtonDescription-Remove Instance"))
+
+([pr8_ProjectKB_Class10377] of  String
+
+	(name "ButtonDescription-Delete Instance"))
+
+([pr8_ProjectKB_Class10378] of  Boolean
+
+	(boolean_value FALSE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10379] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10380] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10381] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10382] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10383] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10384] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([pr8_ProjectKB_Class10385] of  String
+
+	(name "ButtonDescription-View Instance"))
+
+([pr8_ProjectKB_Class10386] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([pr8_ProjectKB_Class10387] of  String
+
+	(name "ButtonDescription-Create Instance"))
+
+([pr8_ProjectKB_Class10388] of  String
+
+	(name "ButtonDescription-View References to Value"))
+
+([pr8_ProjectKB_Class10389] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add Instance"))
+
+([pr8_ProjectKB_Class10390] of  String
+
+	(name "ButtonDescription-Add Instance"))
+
+([pr8_ProjectKB_Class10391] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove Instance"))
+
+([pr8_ProjectKB_Class10392] of  String
+
+	(name "ButtonDescription-Remove Instance"))
+
+([pr8_ProjectKB_Class10393] of  String
+
+	(name "ButtonDescription-Delete Instance"))
+
+([pr8_ProjectKB_Class10394] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10395] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10396] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10397] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10398] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10399] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10400] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10401] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10402] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10403] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10404] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10405] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10406] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([pr8_ProjectKB_Class10407] of  String
+
+	(name "ButtonDescription-View Instance"))
+
+([pr8_ProjectKB_Class10408] of  String
+
+	(name "ButtonDescription-View References to Value"))
+
+([pr8_ProjectKB_Class10409] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([pr8_ProjectKB_Class10410] of  String
+
+	(name "ButtonDescription-Create Instance"))
+
+([pr8_ProjectKB_Class10411] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add Instance"))
+
+([pr8_ProjectKB_Class10412] of  String
+
+	(name "ButtonDescription-Add Instance"))
+
+([pr8_ProjectKB_Class10413] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove Instance"))
+
+([pr8_ProjectKB_Class10414] of  String
+
+	(name "ButtonDescription-Remove Instance"))
+
+([pr8_ProjectKB_Class10415] of  String
+
+	(name "ButtonDescription-Delete Instance"))
+
+([pr8_ProjectKB_Class10416] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10417] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10418] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([pr8_ProjectKB_Class10419] of  String
+
+	(name "ButtonDescription-View Instance"))
+
+([pr8_ProjectKB_Class10420] of  String
+
+	(name "ButtonDescription-View References to Value"))
+
+([pr8_ProjectKB_Class10421] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([pr8_ProjectKB_Class10422] of  String
+
+	(name "ButtonDescription-Create Instance"))
+
+([pr8_ProjectKB_Class10423] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add Instance"))
+
+([pr8_ProjectKB_Class10424] of  String
+
+	(name "ButtonDescription-Add Instance"))
+
+([pr8_ProjectKB_Class10425] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove Instance"))
+
+([pr8_ProjectKB_Class10426] of  String
+
+	(name "ButtonDescription-Remove Instance"))
+
+([pr8_ProjectKB_Class10427] of  String
+
+	(name "ButtonDescription-Delete Instance"))
+
+([pr8_ProjectKB_Class10428] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10429] of  String
+
+	(name "tooltip_text"))
+
+([pr8_ProjectKB_Class10430] of  Boolean
+
+	(boolean_value TRUE)
+	(name "readOnly_configured"))
+
+([pr8_ProjectKB_Class10431] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([pr8_ProjectKB_Class10432] of  String
+
+	(name "Developer")
+	(string_value "name"))
+
+([pr8_ProjectKB_Class10433] of  String
+
+	(name ":FUNCTION")
+	(string_value "%3ADEFINITION-NAME"))
+
+([pr8_ProjectKB_Class10434] of  String
+
+	(name ":RULE")
+	(string_value "%3ADEFINITION-NAME"))
+
+([pr8_ProjectKB_Class10435] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([pr8_ProjectKB_Class10436] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([pr8_ProjectKB_Class10437] of  String
+
+	(name "Operative_system")
+	(string_value "name"))
+
+([pr8_ProjectKB_Class10438] of  String
+
+	(name "App")
+	(string_value "name"))
+
+([pr8_ProjectKB_Class10439] of  String
+
+	(name "User")
+	(string_value "name"))
+
+([pr8_ProjectKB_Class10440] of  String
+
+	(name ":JESS-DEFINITION")
+	(string_value "%3ADEFINITION-NAME"))
+
+([pr8_ProjectKB_Class10441] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([pr8_ProjectKB_Class10442] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([pr8_ProjectKB_Class10443] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([pr8_ProjectKB_Class108] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "economic_level")
+	(property_list [pr8_ProjectKB_Class109])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([pr8_ProjectKB_Class109] of  Property_List
+)
+
+([pr8_ProjectKB_Class11] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Download")
+	(name "download")
+	(property_list [pr8_ProjectKB_Class12])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 60))
+
+([pr8_ProjectKB_Class110] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "wallet")
+	(property_list [pr8_ProjectKB_Class111])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 300))
+
+([pr8_ProjectKB_Class111] of  Property_List
+)
+
+([pr8_ProjectKB_Class12] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class10397]
+		[pr8_ProjectKB_Class10398]))
+
+([pr8_ProjectKB_Class13] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Score")
+	(name "score")
+	(property_list [pr8_ProjectKB_Class14])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 100)
+	(y 120))
+
 ([pr8_ProjectKB_Class133] of  Widget
 
 	(is_hidden FALSE)
@@ -1198,8 +1680,8 @@
 		[pr8_ProjectKB_Class140]
 		[pr8_ProjectKB_Class144]
 		[pr8_ProjectKB_Class146]
-		[pr8_ProjectKB_Class148]
-		[pr8_ProjectKB_Class150]))
+		[pr8_ProjectKB_Class150]
+		[pr8_ProjectKB_Class10263]))
 
 ([pr8_ProjectKB_Class135] of  Property_List
 
@@ -1209,18 +1691,31 @@
 
 	(height 300)
 	(is_hidden FALSE)
+	(label "Recom")
 	(name "recom")
 	(property_list [pr8_ProjectKB_Class137])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 0)
-	(y 310))
+	(width 420)
+	(x 280)
+	(y 0))
 
 ([pr8_ProjectKB_Class137] of  Property_List
 
 	(properties
 		[pr8_ProjectKB_Class138]
-		[pr8_ProjectKB_Class139]))
+		[pr8_ProjectKB_Class139]
+		[pr8_ProjectKB_Class10383]
+		[pr8_ProjectKB_Class10384]
+		[pr8_ProjectKB_Class10385]
+		[pr8_ProjectKB_Class10386]
+		[pr8_ProjectKB_Class10387]
+		[pr8_ProjectKB_Class10388]
+		[pr8_ProjectKB_Class10389]
+		[pr8_ProjectKB_Class10390]
+		[pr8_ProjectKB_Class10391]
+		[pr8_ProjectKB_Class10392]
+		[pr8_ProjectKB_Class10393]
+		[pr8_ProjectKB_Class10394]))
 
 ([pr8_ProjectKB_Class138] of  Boolean
 
@@ -1232,22 +1727,41 @@
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
 
+([pr8_ProjectKB_Class14] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class10403]
+		[pr8_ProjectKB_Class10404]))
+
 ([pr8_ProjectKB_Class140] of  Widget
 
 	(height 60)
 	(is_hidden FALSE)
+	(label "Device")
 	(name "device")
 	(property_list [pr8_ProjectKB_Class141])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
+	(width 270)
 	(x 0)
-	(y 120))
+	(y 60))
 
 ([pr8_ProjectKB_Class141] of  Property_List
 
 	(properties
 		[pr8_ProjectKB_Class142]
-		[pr8_ProjectKB_Class143]))
+		[pr8_ProjectKB_Class143]
+		[pr8_ProjectKB_Class10367]
+		[pr8_ProjectKB_Class10368]
+		[pr8_ProjectKB_Class10369]
+		[pr8_ProjectKB_Class10370]
+		[pr8_ProjectKB_Class10371]
+		[pr8_ProjectKB_Class10372]
+		[pr8_ProjectKB_Class10373]
+		[pr8_ProjectKB_Class10374]
+		[pr8_ProjectKB_Class10375]
+		[pr8_ProjectKB_Class10376]
+		[pr8_ProjectKB_Class10377]
+		[pr8_ProjectKB_Class10378]))
 
 ([pr8_ProjectKB_Class142] of  Boolean
 
@@ -1263,15 +1777,25 @@
 
 	(height 120)
 	(is_hidden FALSE)
+	(label "Pleasure")
 	(name "pleasure")
 	(property_list [pr8_ProjectKB_Class145])
 	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
-	(width 200)
+	(width 270)
 	(x 0)
 	(y 180))
 
 ([pr8_ProjectKB_Class145] of  Property_List
-)
+
+	(properties
+		[pr8_ProjectKB_Class10359]
+		[pr8_ProjectKB_Class10360]
+		[pr8_ProjectKB_Class10361]
+		[pr8_ProjectKB_Class10362]
+		[pr8_ProjectKB_Class10363]
+		[pr8_ProjectKB_Class10364]
+		[pr8_ProjectKB_Class10365]
+		[pr8_ProjectKB_Class10366]))
 
 ([pr8_ProjectKB_Class146] of  Widget
 
@@ -1294,12 +1818,24 @@
 	(name "language")
 	(property_list [pr8_ProjectKB_Class149])
 	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
-	(width 100)
-	(x 100)
-	(y 60))
+	(width 270)
+	(x 0)
+	(y 120))
 
 ([pr8_ProjectKB_Class149] of  Property_List
 )
+
+([pr8_ProjectKB_Class15] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Type")
+	(name "type")
+	(property_list [pr8_ProjectKB_Class16])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 200)
+	(y 0))
 
 ([pr8_ProjectKB_Class150] of  Widget
 
@@ -1308,114 +1844,249 @@
 	(name "age")
 	(property_list [pr8_ProjectKB_Class151])
 	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 60))
+	(width 70)
+	(x 200)
+	(y 0))
 
 ([pr8_ProjectKB_Class151] of  Property_List
 )
 
-([pr8_ProjectKB_Class221] of  String
+([pr8_ProjectKB_Class16] of  Property_List
 
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
+	(properties
+		[pr8_ProjectKB_Class10429]
+		[pr8_ProjectKB_Class10430]))
 
-([pr8_ProjectKB_Class222] of  String
+([pr8_ProjectKB_Class17] of  Widget
 
-	(name ":RULE")
-	(string_value "%3ADEFINITION-NAME"))
+	(height 60)
+	(is_hidden FALSE)
+	(label "Pegi")
+	(name "pegi")
+	(property_list [pr8_ProjectKB_Class18])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 100)
+	(y 60))
 
-([pr8_ProjectKB_Class223] of  String
+([pr8_ProjectKB_Class18] of  Property_List
 
-	(name ":FUNCTION")
-	(string_value "%3ADEFINITION-NAME"))
+	(properties
+		[pr8_ProjectKB_Class10399]
+		[pr8_ProjectKB_Class10400]))
 
-([pr8_ProjectKB_Class224] of  String
+([pr8_ProjectKB_Class19] of  Widget
 
-	(name "Developer")
-	(string_value "name"))
+	(height 60)
+	(is_hidden FALSE)
+	(label "Price")
+	(name "price")
+	(property_list [pr8_ProjectKB_Class20])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 120))
 
-([pr8_ProjectKB_Class225] of  String
+([pr8_ProjectKB_Class20] of  Property_List
 
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
+	(properties
+		[pr8_ProjectKB_Class10401]
+		[pr8_ProjectKB_Class10402]))
 
-([pr8_ProjectKB_Class226] of  String
+([pr8_ProjectKB_Class21] of  Widget
 
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
+	(height 60)
+	(is_hidden FALSE)
+	(label "Name")
+	(name "name")
+	(property_list [pr8_ProjectKB_Class22])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
 
-([pr8_ProjectKB_Class227] of  String
+([pr8_ProjectKB_Class22] of  Property_List
 
-	(name "Operative_system")
-	(string_value "name"))
+	(properties
+		[pr8_ProjectKB_Class10395]
+		[pr8_ProjectKB_Class10396]))
 
-([pr8_ProjectKB_Class228] of  String
+([pr8_ProjectKB_Class23] of  Widget
 
-	(name "App")
-	(string_value "name"))
+	(height 60)
+	(is_hidden FALSE)
+	(label "Developer")
+	(name "developer")
+	(property_list [pr8_ProjectKB_Class24])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 200)
+	(y 60))
 
-([pr8_ProjectKB_Class229] of  String
+([pr8_ProjectKB_Class24] of  Property_List
 
-	(name ":JESS-DEFINITION")
-	(string_value "%3ADEFINITION-NAME"))
+	(properties
+		[pr8_ProjectKB_Class25]
+		[pr8_ProjectKB_Class26]
+		[pr8_ProjectKB_Class10417]
+		[pr8_ProjectKB_Class10418]
+		[pr8_ProjectKB_Class10419]
+		[pr8_ProjectKB_Class10420]
+		[pr8_ProjectKB_Class10421]
+		[pr8_ProjectKB_Class10422]
+		[pr8_ProjectKB_Class10423]
+		[pr8_ProjectKB_Class10424]
+		[pr8_ProjectKB_Class10425]
+		[pr8_ProjectKB_Class10426]
+		[pr8_ProjectKB_Class10427]
+		[pr8_ProjectKB_Class10428]))
 
-([pr8_ProjectKB_Class230] of  Map_Entry
+([pr8_ProjectKB_Class25] of  Boolean
 
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
 
-([pr8_ProjectKB_Class231] of  Map_Entry
+([pr8_ProjectKB_Class26] of  Boolean
 
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([pr8_ProjectKB_Class232] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
 
 ([pr8_ProjectKB_Class384] of  String
 
 	(name "SearchTab_Query"))
 
+([pr8_ProjectKB_Class4] of  Widget
+
+	(is_hidden FALSE)
+	(name "App")
+	(property_list [pr8_ProjectKB_Class5])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([pr8_ProjectKB_Class5] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class6]
+		[pr8_ProjectKB_Class7]
+		[pr8_ProjectKB_Class11]
+		[pr8_ProjectKB_Class13]
+		[pr8_ProjectKB_Class15]
+		[pr8_ProjectKB_Class17]
+		[pr8_ProjectKB_Class19]
+		[pr8_ProjectKB_Class21]
+		[pr8_ProjectKB_Class23]))
+
+([pr8_ProjectKB_Class6] of  Property_List
+
+	(name "layout properties"))
+
+([pr8_ProjectKB_Class7] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Operative System")
+	(name "operative_system")
+	(property_list [pr8_ProjectKB_Class8])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 200)
+	(y 120))
+
+([pr8_ProjectKB_Class78] of  Widget
+
+	(is_hidden FALSE)
+	(name "Operative_system")
+	(property_list [pr8_ProjectKB_Class79])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([pr8_ProjectKB_Class79] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class80]
+		[pr8_ProjectKB_Class81]
+		[pr8_ProjectKB_Class83]))
+
+([pr8_ProjectKB_Class8] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class9]
+		[pr8_ProjectKB_Class10]
+		[pr8_ProjectKB_Class10405]
+		[pr8_ProjectKB_Class10406]
+		[pr8_ProjectKB_Class10407]
+		[pr8_ProjectKB_Class10408]
+		[pr8_ProjectKB_Class10409]
+		[pr8_ProjectKB_Class10410]
+		[pr8_ProjectKB_Class10411]
+		[pr8_ProjectKB_Class10412]
+		[pr8_ProjectKB_Class10413]
+		[pr8_ProjectKB_Class10414]
+		[pr8_ProjectKB_Class10415]
+		[pr8_ProjectKB_Class10416]))
+
+([pr8_ProjectKB_Class80] of  Property_List
+
+	(name "layout properties"))
+
+([pr8_ProjectKB_Class81] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Name")
+	(name "name")
+	(property_list [pr8_ProjectKB_Class82])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([pr8_ProjectKB_Class82] of  Property_List
+
+	(properties
+		[pr8_ProjectKB_Class10381]
+		[pr8_ProjectKB_Class10382]))
+
 ([pr8_ProjectKB_Class83] of  Widget
 
 	(height 60)
 	(is_hidden FALSE)
+	(label "Version")
 	(name "version")
 	(property_list [pr8_ProjectKB_Class84])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
 	(width 100)
 	(x 0)
 	(y 60))
 
 ([pr8_ProjectKB_Class84] of  Property_List
-)
+
+	(properties
+		[pr8_ProjectKB_Class10379]
+		[pr8_ProjectKB_Class10380]))
+
+([pr8_ProjectKB_Class9] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
 
 ([PROJECT] of  Project
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[KB_510583_Class99]
-		[KB_510583_Class154]
 		[KB_510583_Class192]
-		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[KB_510583_Class171]
-		[STANDARD_CLASS_FORM_WIDGET]
 		[KB_510583_Class112]
-		[KB_510583_Class133]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[KB_510583_Class213]
-		[KB_510583_Class234]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[KB_510583_Class234]
+		[pr8_ProjectKB_Class4]
+		[KB_510583_Class154]
+		[STANDARD_FACET_FORM_WIDGET]
+		[pr8_ProjectKB_Class78]
+		[KB_510583_Class171]
+		[STANDARD_CLASS_FORM_WIDGET]
+		[KB_510583_Class133]
 		[pr8_ProjectKB_Class133])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
