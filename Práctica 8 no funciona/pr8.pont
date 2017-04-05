@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-; Wed Apr 05 23:40:44 CEST 2017
-=======
-; Wed Apr 05 17:57:24 CEST 2017
->>>>>>> origin/master
+; Tue Apr 04 14:09:40 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -35,13 +31,8 @@
 		(create-accessor read-write))
 	(single-slot wallet
 		(type FLOAT)
-<<<<<<< HEAD
-		(range 0.0 %3FVARIABLE)
-		(default 0.0)
-=======
 		(range 0.0 500.0)
 		(default 10.0)
->>>>>>> origin/master
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot develops
@@ -206,11 +197,7 @@
 		(type STRING)
 		(create-accessor read-write)))
 
-<<<<<<< HEAD
-(defclass App "it represent the app info, it is the super class for all kind of app"
-=======
 (defclass App
->>>>>>> origin/master
 	(is-a USER)
 	(role concrete)
 	(single-slot operative_system
@@ -249,67 +236,67 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-(defclass Game "Game app, its use to organize hierarchically the Apps"
+(defclass Game
 	(is-a App)
 	(role concrete))
 
-(defclass Action "Action app, its use to organize hierarchically the Game"
+(defclass Action
 	(is-a Game)
 	(role concrete))
 
-(defclass Adventure "Adventure app, its use to organize hierarchically the Game"
+(defclass Adventure
 	(is-a Game)
 	(role concrete))
 
-(defclass Arcade "Arcade app, its use to organize hierarchically the Game"
+(defclass Arcade
 	(is-a Game)
 	(role concrete))
 
-(defclass TableGame "Table game app, its use to organize hierarchically the Game"
+(defclass TableGame
 	(is-a Game)
 	(role concrete))
 
-(defclass Cards "Cards app, its use to organize hierarchically the Game"
+(defclass Cards
 	(is-a Game)
 	(role concrete))
 
-(defclass Music "Music app, its use to organize hierarchically the App"
+(defclass Music
 	(is-a App)
 	(role concrete))
 
-(defclass Rock "Rock app, its use to organize hierarchically the Music"
+(defclass Rock
 	(is-a Music)
 	(role concrete))
 
-(defclass Pop "Pop app, its use to organize hierarchically the Music"
+(defclass Pop
 	(is-a Music)
 	(role concrete))
 
-(defclass Electronic "Electronic app, its use to organize hierarchically the Music"
+(defclass Electronic
 	(is-a Music)
 	(role concrete))
 
-(defclass Social_network "Social network app, its use to organize hierarchically the App"
+(defclass Social_network
 	(is-a App)
 	(role concrete))
 
-(defclass Travel "Travel app, its use to organize hierarchically the App"
+(defclass Travel
 	(is-a App)
 	(role concrete))
 
-(defclass Video "Video app, its use to organize hierarchically the App"
+(defclass Video
 	(is-a App)
 	(role concrete))
 
-(defclass Book "Book app, its use to organize hierarchically the apps"
+(defclass Book
 	(is-a App)
 	(role concrete))
 
-(defclass Art "Book app, its use to organize hierarchically the Books"
+(defclass Art
 	(is-a Book)
 	(role concrete))
 
-(defclass Biography "Book app, its use to organize hierarchically the Books"
+(defclass Biography
 	(is-a Book)
 	(role concrete))
 
@@ -321,11 +308,7 @@
 	(is-a Book)
 	(role concrete))
 
-<<<<<<< HEAD
-(defclass Developer "Developer representation, it contains a list with all the apps that it develop"
-=======
 (defclass Developer
->>>>>>> origin/master
 	(is-a USER)
 	(role concrete)
 	(single-slot name_
@@ -337,11 +320,7 @@
 ;+		(allowed-classes App)
 		(create-accessor read-write)))
 
-<<<<<<< HEAD
-(defclass Operative_system "Operative system representation"
-=======
 (defclass Operative_system
->>>>>>> origin/master
 	(is-a USER)
 	(role concrete)
 	(single-slot name_
@@ -353,11 +332,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-<<<<<<< HEAD
-(defclass User "User info, it have the list of recomendations"
-=======
 (defclass User
->>>>>>> origin/master
 	(is-a USER)
 	(role concrete)
 	(multislot recom
@@ -376,13 +351,8 @@
 		(create-accessor read-write))
 	(single-slot wallet
 		(type FLOAT)
-<<<<<<< HEAD
-		(range 0.0 %3FVARIABLE)
-		(default 0.0)
-=======
 		(range 0.0 500.0)
 		(default 10.0)
->>>>>>> origin/master
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot name_
