@@ -1,4 +1,4 @@
-; Mon Apr 03 21:15:53 CEST 2017
+; Wed Apr 05 23:40:44 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -28,6 +28,16 @@
 	(single-slot score
 		(type FLOAT)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot wallet
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 0.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot develops
+		(type INSTANCE)
+;+		(allowed-classes App)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION-NAME
 		(type STRING)
@@ -70,10 +80,6 @@
 		(allowed-values App Game Action Adventure Arcade TableGame Cards Music Social_network Rock Pop Electronic Travel Video Book Art Biography Comic Informatic)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot pr8_Class0
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot %3ADEFINITION
 		(type STRING)
 ;+		(cardinality 0 1)
@@ -84,15 +90,6 @@
 		(create-accessor read-write))
 	(single-slot name_
 		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot pr8_Class91
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot language
-		(type SYMBOL)
-		(allowed-values Spain Germany French English)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot recom
@@ -200,27 +197,7 @@
 		(type STRING)
 		(create-accessor read-write)))
 
-(defclass Developer
-	(is-a USER)
-	(role concrete)
-	(single-slot name_
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write)))
-
-(defclass Operative_system
-	(is-a USER)
-	(role concrete)
-	(single-slot name_
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot version
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write)))
-
-(defclass App
+(defclass App "it represent the app info, it is the super class for all kind of app"
 	(is-a USER)
 	(role concrete)
 	(single-slot operative_system
@@ -259,67 +236,67 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-(defclass Game
+(defclass Game "Game app, its use to organize hierarchically the Apps"
 	(is-a App)
 	(role concrete))
 
-(defclass Action
+(defclass Action "Action app, its use to organize hierarchically the Game"
 	(is-a Game)
 	(role concrete))
 
-(defclass Adventure
+(defclass Adventure "Adventure app, its use to organize hierarchically the Game"
 	(is-a Game)
 	(role concrete))
 
-(defclass Arcade
+(defclass Arcade "Arcade app, its use to organize hierarchically the Game"
 	(is-a Game)
 	(role concrete))
 
-(defclass TableGame
+(defclass TableGame "Table game app, its use to organize hierarchically the Game"
 	(is-a Game)
 	(role concrete))
 
-(defclass Cards
+(defclass Cards "Cards app, its use to organize hierarchically the Game"
 	(is-a Game)
 	(role concrete))
 
-(defclass Music
+(defclass Music "Music app, its use to organize hierarchically the App"
 	(is-a App)
 	(role concrete))
 
-(defclass Rock
+(defclass Rock "Rock app, its use to organize hierarchically the Music"
 	(is-a Music)
 	(role concrete))
 
-(defclass Pop
+(defclass Pop "Pop app, its use to organize hierarchically the Music"
 	(is-a Music)
 	(role concrete))
 
-(defclass Electronic
+(defclass Electronic "Electronic app, its use to organize hierarchically the Music"
 	(is-a Music)
 	(role concrete))
 
-(defclass Social_network
+(defclass Social_network "Social network app, its use to organize hierarchically the App"
 	(is-a App)
 	(role concrete))
 
-(defclass Travel
+(defclass Travel "Travel app, its use to organize hierarchically the App"
 	(is-a App)
 	(role concrete))
 
-(defclass Video
+(defclass Video "Video app, its use to organize hierarchically the App"
 	(is-a App)
 	(role concrete))
 
-(defclass Book
+(defclass Book "Book app, its use to organize hierarchically the apps"
 	(is-a App)
 	(role concrete))
 
-(defclass Art
+(defclass Art "Book app, its use to organize hierarchically the Books"
 	(is-a Book)
 	(role concrete))
 
-(defclass Biography
+(defclass Biography "Book app, its use to organize hierarchically the Books"
 	(is-a Book)
 	(role concrete))
 
@@ -331,7 +308,31 @@
 	(is-a Book)
 	(role concrete))
 
-(defclass User
+(defclass Developer "Developer representation, it contains a list with all the apps that it develop"
+	(is-a USER)
+	(role concrete)
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot develops
+		(type INSTANCE)
+;+		(allowed-classes App)
+		(create-accessor read-write)))
+
+(defclass Operative_system "Operative system representation"
+	(is-a USER)
+	(role concrete)
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot version
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass User "User info, it have the list of recomendations"
 	(is-a USER)
 	(role concrete)
 	(multislot recom
@@ -348,13 +349,14 @@
 		(allowed-values Travel Technology Film Music Games)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
+	(single-slot wallet
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 0.0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot language
-		(type SYMBOL)
-		(allowed-values Spain Germany French English)
+	(single-slot name_
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot age
