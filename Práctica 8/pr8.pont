@@ -1,4 +1,4 @@
-; Wed Apr 05 01:39:56 CEST 2017
+; Wed Apr 05 17:57:24 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -222,12 +222,12 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot price
-		(type FLOAT)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot name_
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot price
+		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot developer

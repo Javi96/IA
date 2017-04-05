@@ -1,4 +1,4 @@
-; Wed Apr 05 01:39:56 CEST 2017
+; Wed Apr 05 17:57:24 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -1102,7 +1102,7 @@
 	(property_list [KB_510583_Class106])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
 
-([KB_541395_Class3] of  Map
+([KB_716258_Class3] of  Map
 )
 
 ([LAYOUT_PROPERTIES] of  Property_List
@@ -1952,8 +1952,8 @@
 
 ([pr8_ProjectKB_Class20018] of  String
 
-	(name "Developer")
-	(string_value "name"))
+	(name ":RULE")
+	(string_value "%3ADEFINITION-NAME"))
 
 ([pr8_ProjectKB_Class20019] of  String
 
@@ -1962,18 +1962,18 @@
 
 ([pr8_ProjectKB_Class20020] of  String
 
-	(name ":RULE")
-	(string_value "%3ADEFINITION-NAME"))
+	(name "Developer")
+	(string_value "name"))
 
 ([pr8_ProjectKB_Class20021] of  String
 
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
 
 ([pr8_ProjectKB_Class20022] of  String
 
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
 
 ([pr8_ProjectKB_Class20023] of  String
 
@@ -8758,7 +8758,8 @@
 
 ([pr8_ProjectKB_Class384] of  String
 
-	(name "SearchTab_Query"))
+	(name "SearchTab_Query")
+	(string_value "Query Name: query1\nMatch All:true\nLength: 2\nApp	price	is	Other:0.0	1	\nApp	score	is	Other:5.0	1	\n\nQuery Name: query2\nMatch All:true\nLength: 3\nApp	price	is less than	Other:5.0	1	\nApp	developer	contains	Instance:pr8_Class159|Disney	1	\nApp	pegi	is	Other:0	1	\n\nQuery Name: query3\nMatch All:true\nLength: 2\nGame	developer	contains	Instance:pr8_Class184|Electronic Arts 	1	\nGame	download	is greater than	Other:1000000	1	\n\nQuery Name: IOSApp\nMatch All:false\nLength: 3\nApp	operative_system	contains	Instance:pr8_Class134|iOS	1	\nApp	operative_system	contains	Instance:pr8_Class137|iOS	1	\nApp	operative_system	contains	Instance:pr8_Class142|iOS	1	\n\nQuery Name: noIOSApp\nMatch All:true\nLength: 3\nApp	operative_system	does not contain	Instance:pr8_Class134|iOS	1	\nApp	operative_system	does not contain	Instance:pr8_Class137|iOS	1	\nApp	operative_system	does not contain	Instance:pr8_Class142|iOS	1	\n\nQuery Name: query4\nMatch All:true\nLength: 2\nDeveloper	develops	contains	Query:IOSApp|IOSApp	1	\nDeveloper	develops	does not contain	Query:noIOSApp|noIOSApp	1	\n\n"))
 
 ([pr8_ProjectKB_Class4] of  Widget
 
@@ -8882,8 +8883,8 @@
 		[pr8_ProjectKB_Class20968]
 		[pr8_ProjectKB_Class10065]
 		[KB_510583_Class192]
-		[PAL_FORM_WIDGET]
 		[pr8_ProjectKB_Class21087]
+		[PAL_FORM_WIDGET]
 		[KB_510583_Class112]
 		[pr8_ProjectKB_Class20849]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
@@ -8902,15 +8903,15 @@
 		[pr8_ProjectKB_Class78]
 		[KB_510583_Class171]
 		[pr8_ProjectKB_Class20672]
-		[pr8_ProjectKB_Class10135]
 		[STANDARD_CLASS_FORM_WIDGET]
-		[KB_510583_Class133]
+		[pr8_ProjectKB_Class10135]
 		[pr8_ProjectKB_Class21383]
+		[KB_510583_Class133]
 		[pr8_ProjectKB_Class21206]
 		[pr8_ProjectKB_Class10126]
 		[pr8_ProjectKB_Class10196]
-		[pr8_ProjectKB_Class133]
 		[pr8_ProjectKB_Class21740]
+		[pr8_ProjectKB_Class133]
 		[pr8_ProjectKB_Class21502])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
