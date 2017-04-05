@@ -79,12 +79,12 @@
 	(slot price) 
 	(slot score) 
 	(slot type))
-
+	
 (deffacts initial-app "Initial apps in the system"
 	(Jess_app (name "Clash Royale") (developer "Supercell") (download 33688) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.5) (type Action))
-	(Jess_app (name "Super Mario Run") (developer "Disnay") (download 7164) (operative_system "iOS") (version 8) (pegi 10) (price 9.99) (score 2.0) (type Action))
-	(Jess_app (name "Fruit Ninja") (developer "Supercell") (download 9342) (operative_system "Windows Phone") (version 8) (pegi 4) (price 0.0) (score 4.5) (type Action))
-	(Jess_app (name "Plants vs. Zombies 2") (developer "Supercell") (download 19141) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.8) (type Adventure))
+	(Jess_app (name "Super Mario Run") (developer "Electronic Art") (download 7164) (operative_system "iOS") (version 8) (pegi 10) (price 9.99) (score 2.0) (type Action))
+	(Jess_app (name "Fruit Ninja") (developer "Halfbrick Studios") (download 9342) (operative_system "Windows Phone") (version 8) (pegi 4) (price 0.0) (score 4.5) (type Action))
+	(Jess_app (name "Plants vs. Zombies 2") (developer "Nintendo") (download 19141) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.8) (type Adventure))
 	(Jess_app (name "Minecraft: Pocket Edition") (developer "Mojang AB") (download 6835 ) (operative_system "BlackBerry") (version 7) (pegi 9) (price 6.99) (score 4.0) (type Adventure))
 	(Jess_app (name "Candy Crush Saga") (developer "King") (download 63887 ) (operative_system "Symbian") (version 7) (pegi 4) (price 0.0) (score 4.0) (type Arcade))
 	(Jess_app (name "Batman: Arkham Origins") (developer "Warner Bros") (download 593 ) (operative_system "Android") (version 5) (pegi 9) (price 0.0) (score 4.0) (type Arcade))
@@ -100,7 +100,7 @@
 	(Jess_app (name "Facebook") (developer "Facebook") (download 2165451) (operative_system "iOS") (version 10) (pegi 9) (price 0.0) (score 4.8) (type Social_network))
 	(Jess_app (name "Twitter") (developer "Twitter") (download 9521784) (operative_system "Android") (version 6) (pegi 9) (price 0.0) (score 4.4) (type Social_network))
 	(Jess_app (name "Linkedln") (developer "Linkedln") (download 326594) (operative_system "BlackBerry") (version 5) (pegi 9) (price 0.0) (score 4.3) (type Social_network))
-	(Jess_app (name "Google Earth") (developer "Google") (download 65491327) (operative_system "IOS") (version 9) (pegi 4) (price 0.0) (score 4.5) (type Travel))
+	(Jess_app (name "Google Earth") (developer "Google") (download 65491327) (operative_system "Android") (version 5) (pegi 4) (price 0.0) (score 4.5) (type Travel))
 	(Jess_app (name "Iberia") (developer "IBERIA") (download 459865) (operative_system "iOS") (version 8) (pegi 4) (price 0.0) (score 1.5) (type Travel))
 	(Jess_app (name "You Tube") (developer "You Tube") (download 789542) (operative_system "iOS") (version 8) (pegi 4) (price 0.0) (score 5.0) (type Video))
 	(Jess_app (name "Twitch") (developer "Amazon") (download 3265415) (operative_system "Symbian") (version 8) (pegi 4) (price 0.0) (score 5.0) (type Video))
@@ -111,6 +111,7 @@
 	(Jess_app (name "Benjamin Franklin") (developer "John Stevens Cabot Abbott") (download 4569) (operative_system "Android") (version 4) (pegi 4) (price 0.0) (score 3.0) (type Biography))
 	(Jess_app (name "Automator para OS X") (developer "Carlos Burges Ruiz de Gopegui") (download 4253387) (operative_system "iOS") (version 9) (pegi 4) (price 5.0) (score 4.0) (type Informatic))
 	(Jess_app (name "iCloud Beta") (developer "Pere Manel Verdugo Zamora") (download 574228) (operative_system "iOS") (version 8) (pegi 4) (price 6.5) (score 4.0) (type Informatic)))
+
 
 (mapclass :THING)
 (defrule load-app "Creates instances from the app template Jess in Protégé"
@@ -330,26 +331,7 @@
 	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
 
 (mapclass User)
-(deftemplate Jess-User
-	(slot name)
-	(slot device-name)
-	(slot device-version)
-	(slot age)
-	(multislot pleasure)
-	(slot wallet))
-	
-(deffacts User-ini
-	(Jess-User (name "Pedro") (device-name "Android") (device-version 6)(age 21) (pleasure Film Travel) (wallet 25.5))
-	(Jess-User (name "Javi") (device-name "IOS")(device-version 9)(age 21) (pleasure Games Music Tecnology) (wallet 62.4))
-	)
 
-(defrule load-user
-	(Jess-User (name ?name) (device-name ?device-name) (device-version ?device-version)(age ?age) (pleasure $?pleasure) (wallet ?wallet))
-	(object (is-a Operative_system) (OBJECT ?OS) (name ?device-name) (version ?device-version))
-	=>
-	(make-instance of User (name ?name) (device ?OS) (pleasure ?pleasure) (age ?age) (wallet ?wallet))
-	)	
-	
 (defrule recom-book-user "Select book apps to users which likes travel, by pegi and OS version"
 	(object (is-a User) (OBJECT ?user) (name ?name) (device ?d) (age ?age) (wallet ?wallet) (device ?OS) (recom $?recom) (pleasure $? Travel $?))
 	(object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $? ?x $?))
