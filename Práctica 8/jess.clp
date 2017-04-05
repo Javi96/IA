@@ -31,8 +31,10 @@
 	(Jess_developer (name "Zoltán Géczi"))
 	(Jess_developer (name "John Stevens Cabot Abbott"))
 	(Jess_developer (name "Carlos Burges Ruiz de Gopegui"))
-	(Jess_developer (name "Pere Manel Verdugo Zamora")))
+	(Jess_developer (name "Pere Manel Verdugo Zamora"))
+	(Jess_developer (name "Disney")))
 
+	
 (defrule load-developer "Creates instances from the developer template Jess in Protégé"
 	(Jess_developer (name ?name))
 	=>
@@ -80,7 +82,7 @@
 
 (deffacts initial-app "Initial apps in the system"
 	(Jess_app (name "Clash Royale") (developer "Supercell") (download 33688) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.5) (type Action))
-	(Jess_app (name "Super Mario Run") (developer "Supercell") (download 7164) (operative_system "iOS") (version 8) (pegi 10) (price 9.99) (score 2.0) (type Action))
+	(Jess_app (name "Super Mario Run") (developer "Disnay") (download 7164) (operative_system "iOS") (version 8) (pegi 10) (price 9.99) (score 2.0) (type Action))
 	(Jess_app (name "Fruit Ninja") (developer "Supercell") (download 9342) (operative_system "Windows Phone") (version 8) (pegi 4) (price 0.0) (score 4.5) (type Action))
 	(Jess_app (name "Plants vs. Zombies 2") (developer "Supercell") (download 19141) (operative_system "Android") (version 4) (pegi 9) (price 0.0) (score 4.8) (type Adventure))
 	(Jess_app (name "Minecraft: Pocket Edition") (developer "Mojang AB") (download 6835 ) (operative_system "BlackBerry") (version 7) (pegi 9) (price 6.99) (score 4.0) (type Adventure))
@@ -98,7 +100,7 @@
 	(Jess_app (name "Facebook") (developer "Facebook") (download 2165451) (operative_system "iOS") (version 10) (pegi 9) (price 0.0) (score 4.8) (type Social_network))
 	(Jess_app (name "Twitter") (developer "Twitter") (download 9521784) (operative_system "Android") (version 6) (pegi 9) (price 0.0) (score 4.4) (type Social_network))
 	(Jess_app (name "Linkedln") (developer "Linkedln") (download 326594) (operative_system "BlackBerry") (version 5) (pegi 9) (price 0.0) (score 4.3) (type Social_network))
-	(Jess_app (name "Google Earth") (developer "Google") (download 65491327) (operative_system "Android") (version 5) (pegi 4) (price 0.0) (score 4.5) (type Travel))
+	(Jess_app (name "Google Earth") (developer "Google") (download 65491327) (operative_system "IOS") (version 9) (pegi 4) (price 0.0) (score 4.5) (type Travel))
 	(Jess_app (name "Iberia") (developer "IBERIA") (download 459865) (operative_system "iOS") (version 8) (pegi 4) (price 0.0) (score 1.5) (type Travel))
 	(Jess_app (name "You Tube") (developer "You Tube") (download 789542) (operative_system "iOS") (version 8) (pegi 4) (price 0.0) (score 5.0) (type Video))
 	(Jess_app (name "Twitch") (developer "Amazon") (download 3265415) (operative_system "Symbian") (version 8) (pegi 4) (price 0.0) (score 5.0) (type Video))
@@ -119,12 +121,12 @@
 	
 (defrule l
 	(Jess_app (name ?name) (developer ?dev))
-	(object (is-a Developer) (OBJECT ?DEV) (name ?dev) (develops $?develops))
 	(object (is-a App) (name ?name) (developer ?appDev) (OBJECT ?APP))
+	(object (is-a Developer) (OBJECT ?DEV) (name ?dev) (develops $?develops))
 	(test(not(member$ ?APP ?develops)))
 	=>
 	(slot-set ?APP developer ?DEV)
-	(slot-insert$ ?developer develops 1 ?APP)
+	(slot-insert$ ?DEV develops 1 ?APP)
 	)	
 	
 (mapclass Game)
@@ -328,6 +330,26 @@
 	(insert$ ?list2 (+ 1 (length$ ?list2)) ?app)))
 
 (mapclass User)
+(deftemplate Jess-User
+	(slot name)
+	(slot device-name)
+	(slot device-version)
+	(slot age)
+	(multislot pleasure)
+	(slot wallet))
+	
+(deffacts User-ini
+	(Jess-User (name "Pedro") (device-name "Android") (device-version 6)(age 21) (pleasure Film Travel) (wallet 25.5))
+	(Jess-User (name "Javi") (device-name "IOS")(device-version 9)(age 21) (pleasure Games Music Tecnology) (wallet 62.4))
+	)
+
+(defrule load-user
+	(Jess-User (name ?name) (device-name ?device-name) (device-version ?device-version)(age ?age) (pleasure $?pleasure) (wallet ?wallet))
+	(object (is-a Operative_system) (OBJECT ?OS) (name ?device-name) (version ?device-version))
+	=>
+	(make-instance of User (name ?name) (device ?OS) (pleasure ?pleasure) (age ?age) (wallet ?wallet))
+	)	
+	
 (defrule recom-book-user "Select book apps to users which likes travel, by pegi and OS version"
 	(object (is-a User) (OBJECT ?user) (name ?name) (device ?d) (age ?age) (wallet ?wallet) (device ?OS) (recom $?recom) (pleasure $? Travel $?))
 	(object (is-a :STANDARD-CLASS) (:NAME "Book") (:DIRECT-INSTANCES $? ?x $?))
@@ -480,5 +502,6 @@
 	(object (is-a Operative_system) (OBJECT ?appOS) (version ?vApp) (name ?nameOs))
 	(object (is-a Operative_system) (OBJECT ?OS) (version ?vUser&:(<= ?vApp ?vUser)) (name ?nameOS))
 	=>
-	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x)
-)
+	(slot-insert$ ?user recom (+ 1 (length$ ?recom)) ?x))
+	
+
