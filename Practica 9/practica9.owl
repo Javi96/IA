@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.owl-ontologies.com/Ontology1491674757.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1491674757.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Card">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Game"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TableGame"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Adventure"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Action"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Video">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Book"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Music"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Travel"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Game"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="App"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Electronic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Music"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Pop"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Rock"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Art">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Informatic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Comic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Biography"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Travel">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Book"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Music"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Game"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#App"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OperativeSystem">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Developer"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#App"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#TableGame">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Game"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Card"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Adventure"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Game">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#App"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Book"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Music"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith rdf:resource="#Video"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Rock">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Music"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Electronic"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pop"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Biography">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Informatic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Comic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Art"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Informatic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Comic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Biography"/>
+    <owl:disjointWith rdf:resource="#Art"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Comic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Informatic"/>
+    <owl:disjointWith rdf:resource="#Biography"/>
+    <owl:disjointWith rdf:resource="#Art"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Music">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Book"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith rdf:resource="#Game"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#App"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Adventure">
+    <owl:disjointWith rdf:resource="#Card"/>
+    <owl:disjointWith rdf:resource="#TableGame"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Game"/>
+  </owl:Class>
+  <owl:Class rdf:about="#App">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isDeveloperOf"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#App"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#OperativeSystem"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasOperativeSystem"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasDeveloper"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasDeveloper"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Developer"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith rdf:resource="#OperativeSystem"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Developer"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Book">
+    <owl:disjointWith rdf:resource="#Music"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith rdf:resource="#Game"/>
+    <rdfs:subClassOf rdf:resource="#App"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Action">
+    <rdfs:subClassOf rdf:resource="#Game"/>
+    <owl:disjointWith rdf:resource="#Card"/>
+    <owl:disjointWith rdf:resource="#TableGame"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Adventure"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Arcade">
+    <owl:disjointWith rdf:resource="#Card"/>
+    <owl:disjointWith rdf:resource="#TableGame"/>
+    <owl:disjointWith rdf:resource="#Adventure"/>
+    <owl:disjointWith rdf:resource="#Action"/>
+    <rdfs:subClassOf rdf:resource="#Game"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Pop">
+    <owl:disjointWith rdf:resource="#Electronic"/>
+    <owl:disjointWith rdf:resource="#Rock"/>
+    <rdfs:subClassOf rdf:resource="#Music"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Developer">
+    <owl:disjointWith rdf:resource="#App"/>
+    <owl:disjointWith rdf:resource="#OperativeSystem"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SocialNetwork">
+    <rdfs:subClassOf rdf:resource="#App"/>
+    <owl:disjointWith rdf:resource="#Book"/>
+    <owl:disjointWith rdf:resource="#Music"/>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith rdf:resource="#Game"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#hasDeveloper">
+    <rdfs:range rdf:resource="#Developer"/>
+    <rdfs:domain rdf:resource="#App"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#isDeveloperOf"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isDeveloperOf">
+    <rdfs:domain rdf:resource="#Developer"/>
+    <rdfs:range rdf:resource="#App"/>
+    <owl:inverseOf rdf:resource="#hasDeveloper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasOperativeSystem">
+    <rdfs:domain rdf:resource="#App"/>
+    <rdfs:range rdf:resource="#OperativeSystem"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
