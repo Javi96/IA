@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.owl-ontologies.com/Ontology1491674757.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1491674757.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Card">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Game"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Action"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Adventure"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TableGame"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Electronic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Music"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Rock"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Pop"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Video">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Game"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Travel"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Music"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Book"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="App"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Art">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Biography"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Comic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Informatic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Travel">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Game"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Music"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Book"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#App"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OperativeSystem">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#App"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Developer"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#TableGame">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Game"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Adventure"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Card"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Game">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#App"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Music"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Book"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Rock">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Music"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pop"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Electronic"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Biography">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Art"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Comic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Informatic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Informatic">
+    <owl:disjointWith rdf:resource="#Art"/>
+    <owl:disjointWith rdf:resource="#Biography"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Comic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Comic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Art"/>
+    <owl:disjointWith rdf:resource="#Biography"/>
+    <owl:disjointWith rdf:resource="#Informatic"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Music">
+    <owl:disjointWith rdf:resource="#Game"/>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Book"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#App"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Inconsistent">
+    <rdfs:subClassOf rdf:resource="#Game"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Book"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#App">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Developer"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasDeveloper"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasDeveloper"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#OperativeSystem"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasOperativeSystem"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isDeveloperOf"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#App"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Developer"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#OperativeSystem"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Adventure">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TableGame"/>
+    <owl:disjointWith rdf:resource="#Card"/>
+    <rdfs:subClassOf rdf:resource="#Game"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Action">
+    <rdfs:subClassOf rdf:resource="#Game"/>
+    <owl:disjointWith rdf:resource="#Adventure"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Arcade"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TableGame"/>
+    <owl:disjointWith rdf:resource="#Card"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Book">
+    <owl:disjointWith rdf:resource="#Game"/>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SocialNetwork"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Music"/>
+    <rdfs:subClassOf rdf:resource="#App"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Arcade">
+    <owl:disjointWith rdf:resource="#Action"/>
+    <owl:disjointWith rdf:resource="#Adventure"/>
+    <owl:disjointWith rdf:resource="#TableGame"/>
+    <owl:disjointWith rdf:resource="#Card"/>
+    <rdfs:subClassOf rdf:resource="#Game"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Pop">
+    <owl:disjointWith rdf:resource="#Rock"/>
+    <owl:disjointWith rdf:resource="#Electronic"/>
+    <rdfs:subClassOf rdf:resource="#Music"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Developer">
+    <owl:disjointWith rdf:resource="#OperativeSystem"/>
+    <owl:disjointWith rdf:resource="#App"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SocialNetwork">
+    <rdfs:subClassOf rdf:resource="#App"/>
+    <owl:disjointWith rdf:resource="#Game"/>
+    <owl:disjointWith rdf:resource="#Video"/>
+    <owl:disjointWith rdf:resource="#Travel"/>
+    <owl:disjointWith rdf:resource="#Music"/>
+    <owl:disjointWith rdf:resource="#Book"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#hasDeveloper">
+    <rdfs:range rdf:resource="#Developer"/>
+    <rdfs:domain rdf:resource="#App"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#isDeveloperOf"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isDeveloperOf">
+    <rdfs:domain rdf:resource="#Developer"/>
+    <rdfs:range rdf:resource="#App"/>
+    <owl:inverseOf rdf:resource="#hasDeveloper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasOperativeSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#App"/>
+    <rdfs:range rdf:resource="#OperativeSystem"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#App"/>
+          <owl:Class rdf:about="#Developer"/>
+          <owl:Class rdf:about="#OperativeSystem"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#App"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasVersion">
+    <rdfs:domain rdf:resource="#OperativeSystem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPegi">
+    <rdfs:domain rdf:resource="#App"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasType">
+    <rdfs:domain rdf:resource="#App"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >Action</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >Video</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                      >Game</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Music</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                          >Pop</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                    >Comic</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first rdf:datatype=
+                                      "http://www.w3.org/2001/XMLSchema#string"
+                                      >Informatic</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            <rdf:first rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >TableGame</rdf:first>
+                                          </rdf:rest>
+                                          <rdf:first rdf:datatype=
+                                          "http://www.w3.org/2001/XMLSchema#string"
+                                          >Card</rdf:first>
+                                        </rdf:rest>
+                                        <rdf:first rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Arcade</rdf:first>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                  <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                  >Biography</rdf:first>
+                                </rdf:rest>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Art</rdf:first>
+                              </rdf:rest>
+                              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                              >Electronic</rdf:first>
+                            </rdf:rest>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Rock</rdf:first>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Book</rdf:first>
+                  </rdf:rest>
+                  <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >Social_network</rdf:first>
+                </rdf:rest>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Travel</rdf:first>
+              </rdf:rest>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Adventure</rdf:first>
+          </rdf:rest>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDownload">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#App"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="hasPrize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#App"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:FunctionalProperty>
+  <Developer rdf:ID="Supercell">
+    <isDeveloperOf>
+      <Action rdf:ID="Clash_of_clans">
+        <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Action</hasType>
+        <hasDeveloper rdf:resource="#Supercell"/>
+        <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</hasScore>
+        <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45826995</hasDownload>
+        <hasOperativeSystem>
+          <OperativeSystem rdf:ID="BlackBerry">
+            <hasVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >8</hasVersion>
+            <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >BlackBerry</hasName>
+          </OperativeSystem>
+        </hasOperativeSystem>
+        <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</hasPegi>
+        <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</hasPrize>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Clash of clans</hasName>
+      </Action>
+    </isDeveloperOf>
+    <isDeveloperOf>
+      <Action rdf:ID="Hay_day">
+        <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Action</hasType>
+        <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9856511</hasDownload>
+        <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</hasScore>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Hay day</hasName>
+        <hasDeveloper rdf:resource="#Supercell"/>
+        <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</hasPrize>
+        <hasOperativeSystem>
+          <OperativeSystem rdf:ID="Android">
+            <hasVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >4</hasVersion>
+            <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Android</hasName>
+          </OperativeSystem>
+        </hasOperativeSystem>
+        <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</hasPegi>
+      </Action>
+    </isDeveloperOf>
+    <isDeveloperOf>
+      <Action rdf:ID="Boom_beach">
+        <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</hasPegi>
+        <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</hasScore>
+        <hasOperativeSystem>
+          <OperativeSystem rdf:ID="iOS">
+            <hasVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >10</hasVersion>
+            <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >iOS</hasName>
+          </OperativeSystem>
+        </hasOperativeSystem>
+        <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Action</hasType>
+        <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</hasPrize>
+        <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5366489</hasDownload>
+        <hasDeveloper rdf:resource="#Supercell"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Boom beach</hasName>
+      </Action>
+    </isDeveloperOf>
+    <isDeveloperOf>
+      <Action rdf:ID="Clash_royale">
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Clash Royale</hasName>
+        <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</hasPrize>
+        <hasDeveloper rdf:resource="#Supercell"/>
+        <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Action</hasType>
+        <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</hasPegi>
+        <hasOperativeSystem rdf:resource="#BlackBerry"/>
+        <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1569874</hasDownload>
+        <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</hasScore>
+      </Action>
+    </isDeveloperOf>
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Supercell</hasName>
+  </Developer>
+  <Developer rdf:ID="Google">
+    <isDeveloperOf>
+      <Travel rdf:ID="Google_Earth">
+        <hasDeveloper rdf:resource="#Google"/>
+        <hasOperativeSystem rdf:resource="#Android"/>
+        <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4856123</hasDownload>
+        <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</hasPrize>
+        <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Travel</hasType>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Google Earth</hasName>
+        <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</hasScore>
+        <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</hasPegi>
+      </Travel>
+    </isDeveloperOf>
+    <isDeveloperOf>
+      <Video rdf:ID="You_Tube">
+        <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >958896</hasDownload>
+        <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</hasPrize>
+        <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</hasPegi>
+        <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</hasScore>
+        <hasDeveloper rdf:resource="#Google"/>
+        <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Video</hasType>
+        <hasOperativeSystem rdf:resource="#Android"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >You Tube</hasName>
+      </Video>
+    </isDeveloperOf>
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Google</hasName>
+  </Developer>
+  <Music rdf:ID="Spotify_Music">
+    <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >10</hasPrize>
+    <hasOperativeSystem rdf:resource="#iOS"/>
+    <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</hasScore>
+    <hasDeveloper>
+      <Developer rdf:ID="Spotify_Ltd">
+        <isDeveloperOf rdf:resource="#Spotify_Music"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Spotify Ltd</hasName>
+      </Developer>
+    </hasDeveloper>
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Spotify Music</hasName>
+    <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</hasPegi>
+    <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Music</hasType>
+    <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2236541</hasDownload>
+  </Music>
+  <SocialNetwork rdf:ID="Twitter">
+    <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</hasPrize>
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Twitter</hasName>
+    <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</hasScore>
+    <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9521784</hasDownload>
+    <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Social_network</hasType>
+    <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</hasPegi>
+    <hasDeveloper>
+      <Developer rdf:ID="Twitter_Inc">
+        <isDeveloperOf rdf:resource="#Twitter"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Twitter</hasName>
+      </Developer>
+    </hasDeveloper>
+    <hasOperativeSystem rdf:resource="#Android"/>
+  </SocialNetwork>
+  <Informatic rdf:ID="iCloud_Beta">
+    <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</hasPrize>
+    <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Informatic</hasType>
+    <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >23518</hasDownload>
+    <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</hasPegi>
+    <hasOperativeSystem rdf:resource="#iOS"/>
+    <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</hasScore>
+    <hasDeveloper>
+      <Developer rdf:ID="Apple">
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Apple</hasName>
+        <isDeveloperOf rdf:resource="#iCloud_Beta"/>
+      </Developer>
+    </hasDeveloper>
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >iCloud Beta</hasName>
+  </Informatic>
+  <Adventure rdf:about="#0">
+    <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Adventure</hasType>
+    <hasPrize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</hasPrize>
+    <hasPegi rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</hasPegi>
+    <hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >5</hasScore>
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Plants vs Zombies 2</hasName>
+    <hasDeveloper>
+      <Developer rdf:ID="Mojang_AB">
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Mojang AB</hasName>
+        <isDeveloperOf rdf:resource="#0"/>
+      </Developer>
+    </hasDeveloper>
+    <hasDownload rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1236448</hasDownload>
+    <hasOperativeSystem rdf:resource="#Android"/>
+  </Adventure>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

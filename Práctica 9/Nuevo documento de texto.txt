@@ -1,0 +1,23 @@
+@RELATION graphics
+
+						TYPE  GENERATION  GAMA
+						GTX   7           20
+						
+@ATTRIBUTE type					{TITAN, GTX, GT, STANDART}		
+@ATTRIBUTE generation			REAL			
+@ATTRIBUTE range				REAL			
+@ATTRIBUTE max_gpu_temperature	NUMERIC
+@ATTRIBUTE directX				REAL
+@ATTRIBUTE price				NUMERIC
+@ATTRIBUTE cuda_cores			REAL
+@ATTRIBUTE base_clock			NUMERIC
+@ATTRIBUTE boost_clock			NUMERIC
+@ATTRIBUTE memory				NUMERIC
+@ATTRIBUTE memory_speed			NUMERIC
+@ATTRIBUTE bandwidth			NUMERIC
+@ATTRIBUTE power_min			NUMERIC
+@ATTRIBUTE power_recom			NUMERIC
+@ATTRIBUTE modify				{TI, NONE}
+
+@DATA
+GTX,7,60,97,12,149.00,1152,980,1033,2.00,6.00,192.20,170,500,NONE
