@@ -1,4 +1,4 @@
-frase(X) --> grupo_nominal(GN), grupo_verbal(GV), complemento_cc(C), {atom_concat(GV, GN, X1), atom_concat(X1,C,X)}.
+frase(X) --> grupo_nominal(GN), grupo_verbal(GV), complemento_cc(C), {atom_concat(' por ', GN, X2), atom_concat(GV, X2, X1), atom_concat(' ', C, X3), atom_concat(X1,X3,X)}.
 
 complemento_cc(X) --> preposicion(P), grupo_nominal(GN), {atom_concat(P, ' ', X1), atom_concat(X1, GN, X)}.
 
@@ -10,13 +10,25 @@ grupo_nominal(X) --> articulo(A), nombre(N), {atom_concat(A, ' ', X1), atom_conc
 
 grupo_nominal(X) --> articulo(A), nombre(N), complemento_directo(CD), {atom_concat(GN, ' ', X1), atom_concat(X1, V, X2), atom_concat(X2, ' ', X3),atom_concat(X3, CD, X)}.
 
-grupo_verbal(X) --> verbo(V), grupo_nominal(GN), {atom_concat(GN, ' ', X1), atom_concat(X1, V, X)}.
+grupo_verbal(X) --> verbo(V, pasado, 3, singular), grupo_nominal(GN), {atom_concat(GN, ' ', X1), atom_concat(X1, V, X)}.
 
-grupo_verbal(V) --> verbo(V).
+grupo_verbal(V) --> verbo(V, pasado, 3, singular).
 
 articulo(P) --> [P], {es_articulo(P)}.
 nombre(P) --> [P], {es_nombre(P)}.
-verbo(P) --> [P], {es_verbo(P)}.
+
+verbo(A, Tiempo, Persona, Numero) --> [V], {
+	atom_concat(Raiz, Terminacion, V),
+	es_verbo(Raiz, Infinitivo),
+	es_terminacion(Terminacion, Tiempo,Persona,Numero),
+	atom_concat('fue', ' ', X1),
+	atom_concat(X1, Raiz, X2),
+	nueva_terminacion(Infinitivo, Persona, Numero, NuevaT),
+	atom_concat(X2, NuevaT, A)
+}.
+
+
+
 preposicion(P) --> [P], {es_preposicion(P)}.
 
 es_articulo(el).
@@ -29,33 +41,15 @@ es_nombre(ninio).
 es_nombre(flor).
 es_nombre(yo).
 
-es_verbo(tome).
-es_verbo(dibujo).
-es_verbo(come).
+
 
 es_preposicion(en).
 
-
-
-
-
-% es_terminacion(termin, Tiempo, Persona, Numero).
-es_terminacion(o, pasado ,3 , singular).
-
-% es_verbo(Raiz, Infinitivo).
 es_verbo(dibuj, ar).
 
-verbo --> [V].
-verbo(Infinitivo, Tiempo, Persona, Numero) --> [V], {
-	atom_concat(Raiz, Terminacion, V),
-	es_verbo(Raiz, Infinitivo),
-	es_terminacion(Terminacion, Tiempo,Persona,Numero)
-}.
+es_terminacion(o, pasado, 3, singular).
 
-% verbo(Infinitivo, Tiempo, Persona, Numero, [hablarás], []).
-
-% ej cuatro entrega
-
+nueva_terminacion(ar, 3, singular, ada).
 
 
 
